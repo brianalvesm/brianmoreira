@@ -39,10 +39,13 @@ h1 {
 
 @media only screen and (max-width: 768px) {
   .page-wip .wrapper {
-    background-position: center bottom;
-    background-size: contain; }
+    background: none; }
     .page-wip .wrapper .hero-section {
-      padding: 40px; }
+      padding: 40px 40px 145px;
+      background-image: url("../../images/page-wip-background.jpg");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: contain; }
       .page-wip .wrapper .hero-section h1 {
         font-size: 40px; }
     .page-wip .wrapper .wip-description {
