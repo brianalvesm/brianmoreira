@@ -1,52 +1,78 @@
+@font-face {
+  font-family: 'montserratregular';
+  src: url("../fonts/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/montserrat-regular-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserratsemibold';
+  src: url("../fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("../fonts/montserrat-semibold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
 body, html {
   margin: 0;
   height: 100%;
-  font: normal normal 1rem/1.5 Helvetica, Arial, sans-serif; }
+  font: normal normal 16px/1.5 "montserratregular", sans-serif;
+  background-color: black;
+  color: white;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-a {
-  color: #00B7FF; }
-
-h1 {
-  color: #222;
-  margin-top: 0; }
-
-.page-wip .wrapper {
-  background-image: url("../../images/page-wip-background.jpg");
+* {
   background-repeat: no-repeat;
-  background-position: center 100px;
-  background-size: auto;
+  text-align: center; }
+  *:after, *:before {
+    background-repeat: no-repeat; }
+
+section {
+  width: 100%; }
+
+b {
+  font-family: "montserratsemibold", sans-serif; }
+
+.wrapper {
   margin: 0 auto;
-  height: auto;
-  min-height: 100%; }
-  .page-wip .wrapper .hero-section {
-    position: absolute;
-    top: 100px;
-    left: 25%; }
-    .page-wip .wrapper .hero-section h1 {
-      font-family: 'Caveat', cursive;
-      font-weight: 700;
-      font-size: 80px;
-      margin-bottom: 0;
-      color: #7DC1D9; }
-  .page-wip .wrapper .wip-description {
-    width: 520px; }
+  width: 100%;
+  max-width: 1920px;
+  background-image: url("../images/space-bg-first-half-min.jpg");
+  background-size: cover;
+  background-position: top center;
+  overflow: hidden; }
 
-@media only screen and (max-width: 1024px) {
-  .page-wip .wrapper .hero-section {
-    top: 0;
-    left: 0;
-    padding: 80px; } }
+.paragraph {
+  font-size: 22px;
+  font-weight: 300; }
 
-@media only screen and (max-width: 768px) {
-  .page-wip .wrapper {
-    background: none; }
-    .page-wip .wrapper .hero-section {
-      padding: 40px 40px 145px;
-      background-image: url("../../images/page-wip-background.jpg");
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      background-size: contain; }
-      .page-wip .wrapper .hero-section h1 {
-        font-size: 40px; }
-    .page-wip .wrapper .wip-description {
-      width: auto; } }
+.sec {
+  position: relative; }
+  .sec--hero {
+    background-image: url("../images/home-planet-min.png");
+    background-position-x: center; }
+    .sec--hero:after {
+      content: "";
+      display: block;
+      width: 280px;
+      height: 814px;
+      background-image: url("../images/offset-planet.png");
+      background-size: contain;
+      position: absolute;
+      z-index: 0;
+      right: 0; }
+    .sec--hero .logo {
+      margin: 200px auto 160px; }
+    .sec--hero .paragraph {
+      margin-top: 80px; }
+    @media only screen and (max-width: 80rem) {
+      .sec--hero {
+        background-size: contain; } }
+    @media only screen and (max-width: 40rem) {
+      .sec--hero {
+        background-size: 40rem; }
+        .sec--hero .logo {
+          margin: 100px auto 100px; }
+        .sec--hero .paragraph {
+          margin-top: 0; } }
+  .sec:nth-child(2) {
+    padding-top: 450px; }
