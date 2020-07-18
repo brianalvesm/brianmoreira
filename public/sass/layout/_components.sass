@@ -65,10 +65,12 @@
 			animation: orange-milkyway 1s ease-in-out forwards
 		&.is-purple
 			animation: purple-milkyway 2s ease-in-out forwards
+		&.is-green
+			animation: green-milkyway 2s ease-in-out forwards
 		&.is-blue
 			animation: blue-milkyway 2s ease-in-out forwards
 		&.is-turquoise
-			animation: turquoise-milkyway 1s ease-in-out forwards
+			animation: turquoise-milkyway 2s ease-in-out forwards
 		&.is-red
 			animation: red-milkyway 2s ease-in-out forwards
 	&-andromeda li
@@ -80,6 +82,8 @@
 			animation: orange-andromeda 2s ease-in-out forwards
 		&.is-purple
 			animation: purple-andromeda 2s ease-in-out forwards
+		&.is-green
+			animation: green-andromeda 2s ease-in-out forwards
 		&.is-blue
 			animation: blue-andromeda 2s ease-in-out forwards
 		&.is-turquoise
@@ -168,11 +172,40 @@
 		bottom: 118px
 		transform: translateX(140px)
 		z-index: 3
+@keyframes green-milkyway
+	0%
+		bottom: 118px
+		transform: translateX(140px)
+		z-index: 3
+	50%
+		bottom: 80px
+		transform: translateX(70px)
+		z-index: 4
+	100%
+		bottom: 40px
+		transform: none
+		z-index: 4
+
+@keyframes green-andromeda
+	0%
+		bottom: 40px
+		z-index: 4
+	50%
+		bottom: 80px
+		transform: translateX(70px)
+		z-index: 4
+	100%
+		bottom: 118px
+		transform: translateX(140px)
+		z-index: 3
 
 @keyframes turquoise-milkyway
 	0%
 		bottom: 88px
 		transform: translateY(-70px)
+	50%
+		bottom: 118px
+		transform: translateX(70px)
 	100%
 		bottom: 80px
 		transform: none
