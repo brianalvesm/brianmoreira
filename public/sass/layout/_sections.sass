@@ -1,9 +1,10 @@
 // Sections
 .sec
 	position: relative
+	margin-bottom: 450px
 	&--hero
 		background:
-			image: url('../images/home-planet-min.png')
+			image: url('../images/home-planet.png')
 			position-x: center
 		&:after
 			content: ""
@@ -17,7 +18,7 @@
 			z-index: 0
 			right: 0
 		.logo
-			margin: 200px auto 160px
+			margin: 200px auto 150px
 		.paragraph
 			margin-top: 80px
 		@media only screen and (max-width: 80rem)
@@ -28,6 +29,39 @@
 				margin: 100px auto 100px
 			.paragraph
 				margin-top: 0
-				
-	&:nth-child(2)
-		padding-top: 450px
+	&--design
+		.planet-design-wrap
+			position: relative
+		.sector-title
+			margin: 0 auto
+			position: absolute
+			top: calc(50% - 45px)
+			left: calc(50% - 783px/2)
+			font-family: $cantarell, $montserrat, sans-serif
+			font-size: 60px
+			font-weight: 400
+			letter-spacing: 16px
+			text-transform: uppercase
+			z-index: 1
+			b
+				font-family: $cantarell-bold, $montserrat, sans-serif
+				font-weight: 700
+	&--web
+		background:
+			image: url('../images/planet-web.png')
+			position: top right
+		padding: 200px 0
+		.planet-web-wrap
+			.sector-title
+				position: relative
+				display: inline-block
+				&:before
+					content: ""
+					display: block
+					width: 341px
+					height: 188px
+					background:
+						image: url('../images/flying-saucer.png')
+					position: absolute
+					top: -110px
+					left: -110px

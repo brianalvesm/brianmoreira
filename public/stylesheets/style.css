@@ -1,19 +1,69 @@
 @font-face {
-  font-family: 'montserratregular';
-  src: url("../fonts/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/montserrat-regular-webfont.woff") format("woff");
+  font-family: 'montserrat-light';
+  src: url("../fonts/montserrat-light-webfont.woff2") format("woff2"), url("../fonts/montserrat-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
-  font-family: 'montserratsemibold';
+  font-family: 'montserrat-lightitalic';
+  src: url("../fonts/montserrat-lightitalic-webfont.woff2") format("woff2"), url("../fonts/montserrat-lightitalic-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'montserrat-medium';
+  src: url("../fonts/montserrat-medium-webfont.woff2") format("woff2"), url("../fonts/montserrat-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserrat-mediumitalic';
+  src: url("../fonts/montserrat-mediumitalic-webfont.woff2") format("woff2"), url("../fonts/montserrat-mediumitalic-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'montserrat-semibold';
   src: url("../fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("../fonts/montserrat-semibold-webfont.woff") format("woff");
   font-weight: 600;
   font-style: normal; }
 
+@font-face {
+  font-family: 'cantarell-regular';
+  src: url("../fonts/cantarell-regular-webfont.woff2") format("woff2"), url("../fonts/cantarell-regular-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'cantarell-bold';
+  src: url("../fonts/cantarell-bold-webfont.woff2") format("woff2"), url("../fonts/cantarell-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'satisfy-regular';
+  src: url("../fonts/satisfy-regular-webfont.woff2") format("woff2"), url("../fonts/satisfy-regular-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+.rating {
+  display: inline; }
+  .rating img {
+    width: 35px; }
+    .rating img:nth-child(-n+3) {
+      margin-right: 11px; }
+  .rating span {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 20px;
+    font-family: "cantarell-regular", sans-serif, "montserrat-light", sans-serif, sans-serif;
+    margin-top: 10px; }
+
 body, html {
   margin: 0;
   height: 100%;
-  font: normal normal 16px/1.5 "montserratregular", sans-serif;
+  font: normal normal 14px/1.5 "montserrat-light", sans-serif;
   background-color: black;
   color: white;
   line-height: 1.5;
@@ -26,29 +76,59 @@ body, html {
   *:after, *:before {
     background-repeat: no-repeat; }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+body {
+  overflow: auto;
+  perspective: 1px;
+  transform-style: preserve-3d; }
+  body, body * {
+    transform-style: preserve-3d; }
+
 section {
   width: 100%; }
 
 b {
-  font-family: "montserratsemibold", sans-serif; }
+  font-family: "montserrat-semibold", sans-serif; }
+
+i {
+  font-family: "montserrat-lightitalic", sans-serif; }
 
 .wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
-  background-image: url("../images/space-bg-first-half-min.jpg");
-  background-size: cover;
-  background-position: top center;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
+  .wrapper:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url("../images/space-bg-first-half-min.jpg");
+    background-size: cover;
+    background-position: top center;
+    transform: translateZ(-0.2px) scale(1.2);
+    z-index: -200; }
 
 .paragraph {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 300; }
 
 .sec {
-  position: relative; }
+  position: relative;
+  margin-bottom: 450px; }
   .sec--hero {
-    background-image: url("../images/home-planet-min.png");
+    background-image: url("../images/home-planet.png");
     background-position-x: center; }
     .sec--hero:after {
       content: "";
@@ -61,7 +141,7 @@ b {
       z-index: 0;
       right: 0; }
     .sec--hero .logo {
-      margin: 200px auto 160px; }
+      margin: 200px auto 150px; }
     .sec--hero .paragraph {
       margin-top: 80px; }
     @media only screen and (max-width: 80rem) {
@@ -74,5 +154,35 @@ b {
           margin: 100px auto 100px; }
         .sec--hero .paragraph {
           margin-top: 0; } }
-  .sec:nth-child(2) {
-    padding-top: 450px; }
+  .sec--design .planet-design-wrap {
+    position: relative; }
+  .sec--design .sector-title {
+    margin: 0 auto;
+    position: absolute;
+    top: calc(50% - 45px);
+    left: calc(50% - 783px/2);
+    font-family: "cantarell-regular", sans-serif, "montserrat-light", sans-serif, sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 16px;
+    text-transform: uppercase;
+    z-index: 1; }
+    .sec--design .sector-title b {
+      font-family: "cantarell-bold", sans-serif, "montserrat-light", sans-serif, sans-serif;
+      font-weight: 700; }
+  .sec--web {
+    background-image: url("../images/planet-web.png");
+    background-position: top right;
+    padding: 200px 0; }
+    .sec--web .planet-web-wrap .sector-title {
+      position: relative;
+      display: inline-block; }
+      .sec--web .planet-web-wrap .sector-title:before {
+        content: "";
+        display: block;
+        width: 341px;
+        height: 188px;
+        background-image: url("../images/flying-saucer.png");
+        position: absolute;
+        top: -110px;
+        left: -110px; }
