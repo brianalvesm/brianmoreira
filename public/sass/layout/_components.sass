@@ -12,3 +12,219 @@
 		font-size: 20px
 		font-family: $cantarell, $montserrat, sans-serif
 		margin-top: 10px
+
+.suite-animated
+	position: relative
+	z-index: -1
+	li
+		position: absolute
+		top: auto
+		margin-left: -240px
+		@include transition(500ms)
+		&.is-blue
+			opacity: 1
+			left: 50%
+			bottom: 0
+		&.is-darkblue
+			opacity: 1
+			left: calc(50% + 140px)
+			bottom: 0
+			z-index: 7
+		&.is-orange
+			opacity: 0
+			left: 50%
+			bottom: 0
+			z-index: 7
+		&.is-purple
+			opacity: 1
+			left: calc(50% - 70px)
+		&.is-green
+			opacity: 1
+			left: calc(50% + 70px)
+			bottom: 40px
+			z-index: 6
+		&.is-pink
+			opacity: 1
+			left: calc(50% - 140px)
+			bottom: 80px
+			z-index: 3
+		&.is-turquoise
+			opacity: 1
+			left: calc(50% + 140px)
+			z-index: 2
+		&.is-red
+			opacity: 1
+			left: calc(50% - 70px)
+			z-index: 1
+	&-milkyway li
+		&.is-darkblue
+			animation: darkblue-milkyway 1s ease-in-out forwards
+		&.is-pink
+			animation: pink-milkyway 1s ease-in-out forwards
+		&.is-orange
+			animation: orange-milkyway 1s ease-in-out forwards
+		&.is-purple
+			animation: purple-milkyway 2s ease-in-out forwards
+		&.is-blue
+			animation: blue-milkyway 2s ease-in-out forwards
+		&.is-turquoise
+			animation: turquoise-milkyway 1s ease-in-out forwards
+		&.is-red
+			animation: red-milkyway 2s ease-in-out forwards
+	&-andromeda li
+		&.is-darkblue
+			animation: darkblue-andromeda 1s ease-in-out forwards
+		&.is-pink
+			animation: pink-andromeda 1s ease-in-out forwards
+		&.is-orange
+			animation: orange-andromeda 2s ease-in-out forwards
+		&.is-purple
+			animation: purple-andromeda 2s ease-in-out forwards
+		&.is-blue
+			animation: blue-andromeda 2s ease-in-out forwards
+		&.is-turquoise
+			animation: turquoise-andromeda 1s ease-in-out forwards
+		&.is-red
+			animation: red-andromeda 2s ease-in-out forwards
+	@media only screen and (max-width: 40rem)
+		display: none
+
+@keyframes darkblue-milkyway
+	0%
+		opacity: 0
+		transform: translateX(70px) translateY(40px)
+	100%
+		opacity: 1
+		transform: none
+
+@keyframes darkblue-andromeda
+	0%
+		opacity: 1
+		transform: none
+	100%
+		opacity: 0
+		transform: translateX(70px) translateY(40px)
+		display: none
+
+@keyframes pink-milkyway
+	0%
+		opacity: 0
+		transform: translateX(-70px) translateY(-40px)
+	100%
+		opacity: 1
+		transform: none
+
+@keyframes pink-andromeda
+	0%
+		opacity: 1
+		transform: none
+	100%
+		opacity: 0
+		transform: translateX(-70px) translateY(-40px)
+		display: none
+
+@keyframes orange-milkyway
+	0%
+		opacity: 1
+		transform: none
+	100%
+		opacity: 0
+		transform: translateX(-70px) translateY(40px)
+
+@keyframes orange-andromeda
+	0%
+		opacity: 0
+		transform: translateX(-70px) translateY(40px)
+	50%
+		opacity: 0
+		transform: translateX(-70px) translateY(40px)
+	100%
+		opacity: 1
+		transform: none
+
+@keyframes purple-milkyway
+	0%
+		bottom: 118px
+		transform: translateX(140px)
+		z-index: 3
+	50%
+		bottom: 80px
+		transform: translateX(70px)
+		z-index: 4
+	100%
+		bottom: 40px
+		transform: none
+		z-index: 4
+
+@keyframes purple-andromeda
+	0%
+		bottom: 40px
+		z-index: 4
+	50%
+		bottom: 80px
+		transform: translateX(70px)
+		z-index: 4
+	100%
+		bottom: 118px
+		transform: translateX(140px)
+		z-index: 3
+
+@keyframes turquoise-milkyway
+	0%
+		bottom: 88px
+		transform: translateY(-70px)
+	100%
+		bottom: 80px
+		transform: none
+
+@keyframes turquoise-andromeda
+	0%
+		bottom: 80px
+		transform: none
+	100%
+		bottom: 88px
+		transform: translateY(-70px)
+
+@keyframes red-milkyway
+	0%
+		bottom: 158px
+		transform: translateX(70px)
+	50%
+		bottom: 158px
+		transform: translateX(70px)
+	100%
+		bottom: 120px
+		transform: none
+
+@keyframes red-andromeda
+	0%
+		bottom: 120px
+		transform: none
+	50%
+		bottom: 158px
+		transform: translateX(70px)
+	100%
+		bottom: 158px
+		transform: translateX(70px)
+
+@keyframes blue-milkyway
+	0%
+		transform: translateX(0px) translateY(-80px)
+		z-index: 5
+	50%
+		transform: translateX(-70px) translateY(-39px)
+		z-index: 5
+	100%
+		transform: none
+		z-index: 7
+
+@keyframes blue-andromeda
+	0%
+		transform: none
+		z-index: 7
+	50%
+		transform: translateX(-70px) translateY(-39px)
+		z-index: 5
+	100%
+		transform: translateX(0px) translateY(-80px)
+		z-index: 5
