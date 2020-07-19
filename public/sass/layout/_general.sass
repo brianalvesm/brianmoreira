@@ -8,7 +8,6 @@ body, html
 	line-height: 1.5
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
-	scroll-behavior: smooth
 
 *
 	background-repeat: no-repeat
@@ -58,5 +57,7 @@ a:active
 		@include parallax(-1)
 
 .paragraph
-	font-size: 20px
+	font-size: 19px
 	font-weight: 300
+	@media only screen and (max-width: 40rem)
+		font-size: 16px

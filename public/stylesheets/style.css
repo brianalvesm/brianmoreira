@@ -67,6 +67,7 @@
     position: absolute;
     top: auto;
     margin-left: -240px;
+    width: 400px;
     -webkit-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
     -moz-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
     -ms-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -139,9 +140,6 @@
     animation: turquoise-andromeda 1s ease-in-out forwards; }
   .suite-animated-andromeda li.is-red {
     animation: red-andromeda 2s ease-in-out forwards; }
-  @media only screen and (max-width: 40rem) {
-    .suite-animated {
-      display: none; } }
 
 @keyframes darkblue-milkyway {
   0% {
@@ -321,8 +319,7 @@ body, html {
   color: white;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth; }
+  -moz-osx-font-smoothing: grayscale; }
 
 * {
   background-repeat: no-repeat;
@@ -383,15 +380,19 @@ a:active {
     z-index: -1000; }
 
 .paragraph {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 300; }
+  @media only screen and (max-width: 40rem) {
+    .paragraph {
+      font-size: 16px; } }
 
 .sec {
   position: relative;
-  margin-bottom: 450px; }
+  padding: 250px 0; }
   .sec--hero {
     background-image: url("../images/home-planet.png");
-    background-position-x: center; }
+    background-position-x: center;
+    padding-top: 0; }
     .sec--hero:after {
       content: "";
       display: block;
@@ -399,9 +400,11 @@ a:active {
       height: 814px;
       background-image: url("../images/offset-planet.png");
       background-size: contain;
+      background-position: center right;
       position: absolute;
       z-index: 0;
-      right: 0; }
+      right: 0;
+      animation: offset-planet 120s ease-in-out alternate infinite; }
     .sec--hero .logo {
       margin: 200px auto 150px; }
     .sec--hero .paragraph {
@@ -412,12 +415,18 @@ a:active {
     @media only screen and (max-width: 40rem) {
       .sec--hero {
         background-size: 40rem; }
+        .sec--hero:after {
+          width: 140px;
+          height: 407px; }
         .sec--hero .logo {
           margin: 100px auto 100px; }
         .sec--hero .paragraph {
-          margin-top: 0; } }
-  .sec--intro {
-    padding-top: 250px; }
+          margin-top: 40px; } }
+  .sec--intro article {
+    position: relative; }
+    .sec--intro article img {
+      position: absolute;
+      left: calc(50% - 253px/4); }
   .sec--design .planet-design-wrap {
     position: relative; }
   .sec--design .sector-title {
@@ -434,10 +443,14 @@ a:active {
     .sec--design .sector-title b {
       font-family: "cantarell-bold", sans-serif, "montserrat-light", sans-serif, sans-serif;
       font-weight: 700; }
+    @media only screen and (max-width: 40rem) {
+      .sec--design .sector-title {
+        left: initial;
+        font-size: 36px; } }
   .sec--web {
     background-image: url("../images/planet-web.png");
     background-position: top right;
-    padding: 200px 0; }
+    margin-bottom: 250px; }
     .sec--web .planet-web-wrap .sector-title {
       position: relative;
       display: inline-block; }
@@ -450,3 +463,14 @@ a:active {
         position: absolute;
         top: -110px;
         left: -110px; }
+    @media only screen and (max-width: 40rem) {
+      .sec--web {
+        background-position: top center;
+        background-size: contain;
+        padding-top: 375px; } }
+
+@keyframes offset-planet {
+  0% {
+    transform: translateY(0px); }
+  100% {
+    transform: translateY(200px); } }

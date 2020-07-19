@@ -1,11 +1,12 @@
 // Sections
 .sec
 	position: relative
-	margin-bottom: 450px
+	padding: 250px 0
 	&--hero
 		background:
 			image: url('../images/home-planet.png')
 			position-x: center
+		padding-top: 0
 		&:after
 			content: ""
 			display: block
@@ -14,9 +15,11 @@
 			background:
 				image: url('../images/offset-planet.png')
 				size: contain
+				position: center right
 			position: absolute
 			z-index: 0
 			right: 0
+			animation: offset-planet 120s ease-in-out alternate infinite
 		.logo
 			margin: 200px auto 150px
 		.paragraph
@@ -25,12 +28,18 @@
 			background-size: contain
 		@media only screen and (max-width: 40rem)
 			background-size: 40rem
+			&:after
+				width: 140px
+				height: 407px
 			.logo
 				margin: 100px auto 100px
 			.paragraph
-				margin-top: 0
-	&--intro
-		padding-top: 250px
+				margin-top: 40px
+	&--intro article
+		position: relative
+		img
+			position: absolute
+			left: calc(50% - 253px/4)
 	&--design
 		.planet-design-wrap
 			position: relative
@@ -48,11 +57,14 @@
 			b
 				font-family: $cantarell-bold, $montserrat, sans-serif
 				font-weight: 700
+			@media only screen and (max-width: 40rem)
+				left: initial
+				font-size: 36px
 	&--web
 		background:
 			image: url('../images/planet-web.png')
 			position: top right
-		padding: 200px 0
+		margin-bottom: 250px
 		.planet-web-wrap
 			.sector-title
 				position: relative
@@ -67,3 +79,14 @@
 					position: absolute
 					top: -110px
 					left: -110px
+		@media only screen and (max-width: 40rem)
+			background:
+				position: top center
+				size: contain
+			padding-top: 375px
+
+@keyframes offset-planet
+	0%
+		transform: translateY(0px)
+	100%
+		transform: translateY(200px)
