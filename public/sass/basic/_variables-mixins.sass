@@ -45,3 +45,10 @@ $parallax-ios         : true !default
   -ms-transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
   -o-transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
   transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
+
+@mixin rotate($degree)
+  -webkit-transform: rotate($degree)
+  -moz-transform: rotate($degree)
+  -ms-transform: rotate($degree)
+  -o-transform: rotate($degree)
+  transform: rotate($degree)
