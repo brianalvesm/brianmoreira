@@ -16,6 +16,10 @@ body, html
 	&:before
 		background-repeat: no-repeat
 
+h1,h2,h3,h4,h5,h6
+	margin: 0 auto
+	font-weight: initial
+
 @include parallax-init
 
 section
@@ -61,3 +65,9 @@ a:active
 	font-weight: 300
 	@media only screen and (max-width: 40rem)
 		font-size: 16px
+
+// Helpers
+.left-to-center
+	text-align: left
+	@media only screen and (max-width: 40rem)
+		text-align: center

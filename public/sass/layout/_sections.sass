@@ -3,10 +3,6 @@
 	position: relative
 	padding: 250px 0
 	&--hero
-		background:
-			image: url('../images/home-planet.png')
-			position-x: center
-			size: 1200px
 		padding-top: 0
 		&:after
 			content: ""
@@ -21,23 +17,33 @@
 			z-index: 0
 			right: 0
 			animation: offset-planet 120s ease-in-out alternate infinite
-		.logo
-			margin: 200px auto 150px
+		.logo-wrap
+			display: flex
+			align-items: center
+			justify-content: center
+			position: relative
+			.logo
+				position: absolute
+				z-index: 1
+		.home-planet
+			width: 1200px
 		.paragraph
 			margin-top: 80px
 			padding: 0 25px
 		@media only screen and (max-width: 80rem)
-			background-size: contain
+			.home-planet
+				width: initial
 		@media only screen and (max-width: 40rem)
-			background-size: 40rem
 			&:after
 				width: 140px
 				height: 407px
-			.logo
-				margin: 100px auto 100px
+			.home-planet
+				width: 40rem
 			.paragraph
 				margin-top: 40px
 				padding: 0
+			.signs
+				width: 60%
 	&--intro article
 		position: relative
 		img
@@ -45,12 +51,13 @@
 			left: calc(50% - 253px/4)
 	&--design
 		.planet-design-wrap
+			display: flex
+			align-items: center
+			justify-content: center
 			position: relative
 		.sector-title
 			margin: 0 auto
 			position: absolute
-			top: calc(50% - 45px)
-			left: calc(50% - 783px/2)
 			font-family: $cantarell, $montserrat, sans-serif
 			font-size: 60px
 			font-weight: 400
@@ -82,11 +89,76 @@
 					position: absolute
 					top: -110px
 					left: -110px
-		@media only screen and (max-width: 40rem)
+		@media only screen and (max-width: 64rem)
 			background:
 				position: top center
+				size: 32rem
+			padding-top: 500px
+	&--illustration
+		background:
+			image: url('../images/planet-illustration.png')
+			position: top 100px left
+		.sector-title
+			display: block
+			font-family: $satisfy
+			font-size: 96px
+			color: #F6C534
+			text-align: left
+			& + .rating
+				text-align: left
+				span
+					text-align: left
+		.sector-subtitle
+			font-family: $satisfy
+			font-size: 60px
+			color: #F6C534
+			line-height: 0.9
+			display: inline-block
+			position: relative
+			top: 50px
+			left: 10px
+			z-index: 1
+			&:before
+				content: "...e seu satélite"
+				display: inline-block
+				font-family: $satisfy
+				font-size: 36px
+				color: inherit
+				position: absolute
+				left: -15px
+				top: -38px
+		.animation-wrap
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding-top: 100px
+		.planet-animation
+			position: relative
+			left: -10px
+		.sec-content
+			padding: 50px 100px 0 0
+		@media only screen and (max-width: 1280px)
+			background:
 				size: contain
-			padding-top: 375px
+				position: top 200px left -100px
+			.sector-title
+				font-size: 82px
+			.planet-animation
+				width: 80%
+			.sec-content
+				padding: 50px 0 0
+		@media only screen and (max-width: 40rem)
+			background:
+				position: top -100px center
+				size: 40rem
+			padding-top: 350px
+			.sector-title
+				font-size: 46px
+				text-align: center
+				& + .rating
+					text-align: center
+					span
+						text-align: center
 
 @keyframes offset-planet
 	0%

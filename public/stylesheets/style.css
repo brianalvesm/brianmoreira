@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'montserrat-light';
   src: url("../fonts/montserrat-light-webfont.woff2") format("woff2"), url("../fonts/montserrat-light-webfont.woff") format("woff");
@@ -47,7 +48,7 @@
   font-style: normal; }
 
 .rating {
-  display: inline; }
+  display: block; }
   .rating img {
     width: 35px; }
     .rating img:nth-child(-n+3) {
@@ -327,6 +328,10 @@ body, html {
   *:after, *:before {
     background-repeat: no-repeat; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 auto;
+  font-weight: initial; }
+
 html, body {
   width: 100%;
   height: 100%;
@@ -386,13 +391,16 @@ a:active {
     .paragraph {
       font-size: 16px; } }
 
+.left-to-center {
+  text-align: left; }
+  @media only screen and (max-width: 40rem) {
+    .left-to-center {
+      text-align: center; } }
+
 .sec {
   position: relative;
   padding: 250px 0; }
   .sec--hero {
-    background-image: url("../images/home-planet.png");
-    background-position-x: center;
-    background-size: 1200px;
     padding-top: 0; }
     .sec--hero:after {
       content: "";
@@ -406,37 +414,46 @@ a:active {
       z-index: 0;
       right: 0;
       animation: offset-planet 120s ease-in-out alternate infinite; }
-    .sec--hero .logo {
-      margin: 200px auto 150px; }
+    .sec--hero .logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative; }
+      .sec--hero .logo-wrap .logo {
+        position: absolute;
+        z-index: 1; }
+    .sec--hero .home-planet {
+      width: 1200px; }
     .sec--hero .paragraph {
       margin-top: 80px;
       padding: 0 25px; }
     @media only screen and (max-width: 80rem) {
-      .sec--hero {
-        background-size: contain; } }
+      .sec--hero .home-planet {
+        width: initial; } }
     @media only screen and (max-width: 40rem) {
-      .sec--hero {
-        background-size: 40rem; }
-        .sec--hero:after {
-          width: 140px;
-          height: 407px; }
-        .sec--hero .logo {
-          margin: 100px auto 100px; }
-        .sec--hero .paragraph {
-          margin-top: 40px;
-          padding: 0; } }
+      .sec--hero:after {
+        width: 140px;
+        height: 407px; }
+      .sec--hero .home-planet {
+        width: 40rem; }
+      .sec--hero .paragraph {
+        margin-top: 40px;
+        padding: 0; }
+      .sec--hero .signs {
+        width: 60%; } }
   .sec--intro article {
     position: relative; }
     .sec--intro article img {
       position: absolute;
       left: calc(50% - 253px/4); }
   .sec--design .planet-design-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative; }
   .sec--design .sector-title {
     margin: 0 auto;
     position: absolute;
-    top: calc(50% - 45px);
-    left: calc(50% - 783px/2);
     font-family: "cantarell-regular", sans-serif, "montserrat-light", sans-serif, sans-serif;
     font-size: 60px;
     font-weight: 400;
@@ -466,11 +483,75 @@ a:active {
         position: absolute;
         top: -110px;
         left: -110px; }
-    @media only screen and (max-width: 40rem) {
+    @media only screen and (max-width: 64rem) {
       .sec--web {
         background-position: top center;
+        background-size: 32rem;
+        padding-top: 500px; } }
+  .sec--illustration {
+    background-image: url("../images/planet-illustration.png");
+    background-position: top 100px left; }
+    .sec--illustration .sector-title {
+      display: block;
+      font-family: "satisfy-regular", sans-serif;
+      font-size: 96px;
+      color: #F6C534;
+      text-align: left; }
+      .sec--illustration .sector-title + .rating {
+        text-align: left; }
+        .sec--illustration .sector-title + .rating span {
+          text-align: left; }
+    .sec--illustration .sector-subtitle {
+      font-family: "satisfy-regular", sans-serif;
+      font-size: 60px;
+      color: #F6C534;
+      line-height: 0.9;
+      display: inline-block;
+      position: relative;
+      top: 50px;
+      left: 10px;
+      z-index: 1; }
+      .sec--illustration .sector-subtitle:before {
+        content: "...e seu satélite";
+        display: inline-block;
+        font-family: "satisfy-regular", sans-serif;
+        font-size: 36px;
+        color: inherit;
+        position: absolute;
+        left: -15px;
+        top: -38px; }
+    .sec--illustration .animation-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px; }
+    .sec--illustration .planet-animation {
+      position: relative;
+      left: -10px; }
+    .sec--illustration .sec-content {
+      padding: 50px 100px 0 0; }
+    @media only screen and (max-width: 1280px) {
+      .sec--illustration {
         background-size: contain;
-        padding-top: 375px; } }
+        background-position: top 200px left -100px; }
+        .sec--illustration .sector-title {
+          font-size: 82px; }
+        .sec--illustration .planet-animation {
+          width: 80%; }
+        .sec--illustration .sec-content {
+          padding: 50px 0 0; } }
+    @media only screen and (max-width: 40rem) {
+      .sec--illustration {
+        background-position: top -100px center;
+        background-size: 40rem;
+        padding-top: 350px; }
+        .sec--illustration .sector-title {
+          font-size: 46px;
+          text-align: center; }
+          .sec--illustration .sector-title + .rating {
+            text-align: center; }
+            .sec--illustration .sector-title + .rating span {
+              text-align: center; } }
 
 @keyframes offset-planet {
   0% {
