@@ -392,6 +392,7 @@ a:active {
   .sec--hero {
     background-image: url("../images/home-planet.png");
     background-position-x: center;
+    background-size: 1200px;
     padding-top: 0; }
     .sec--hero:after {
       content: "";
@@ -408,7 +409,8 @@ a:active {
     .sec--hero .logo {
       margin: 200px auto 150px; }
     .sec--hero .paragraph {
-      margin-top: 80px; }
+      margin-top: 80px;
+      padding: 0 25px; }
     @media only screen and (max-width: 80rem) {
       .sec--hero {
         background-size: contain; } }
@@ -421,7 +423,8 @@ a:active {
         .sec--hero .logo {
           margin: 100px auto 100px; }
         .sec--hero .paragraph {
-          margin-top: 40px; } }
+          margin-top: 40px;
+          padding: 0; } }
   .sec--intro article {
     position: relative; }
     .sec--intro article img {
