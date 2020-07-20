@@ -37,16 +37,22 @@
 			.home-planet
 				width: initial
 		@media only screen and (max-width: 40rem)
+			background:
+				image: url('../images/home-planet.png')
+				size: 40rem
+				position: top center
 			&:after
 				width: 140px
 				height: 407px
-			.home-planet
-				width: 40rem
+			.hero-wrap
+				height: 260px
 			.paragraph
 				margin-top: 40px
 				padding: 0
 			.signs
 				width: 60%
+			.grid-x:last-child
+				top: initial
 	&--intro article
 		position: relative
 		img
@@ -61,14 +67,14 @@
 		.sector-title
 			margin: 0 auto
 			position: absolute
-			font-family: $cantarell, $montserrat, sans-serif
+			font-family: $cantarell
 			font-size: 60px
 			font-weight: 400
 			letter-spacing: 16px
 			text-transform: uppercase
 			z-index: 1
 			b
-				font-family: $cantarell-bold, $montserrat, sans-serif
+				font-family: $cantarell-bold
 				font-weight: 700
 			@media only screen and (max-width: 40rem)
 				left: initial
@@ -201,9 +207,9 @@
 	&--portfolio
 		background-color: #4D1E35
 		position: relative
+		padding: 0
 		.portfolio-wrap
-			position: absolute
-			top: -900px
+			position: relative
 			display: flex
 			flex-wrap: wrap
 			align-items: flex-start
@@ -211,7 +217,8 @@
 			.row
 				display: flex
 				flex-wrap: wrap
-				&:nth-child(n+2) .item
+				&:nth-child(2) .item,
+				&:nth-child(3) .item
 					width: calc(50% - 20px)
 			.item
 				margin: 10px
@@ -229,6 +236,19 @@
 					height: 100%
 					object-fit: cover
 					object-position: 50% 50%
+		@media only screen and (max-width: 40rem)
+			padding: 0
+			.portfolio-wrap
+				position: relative
+				top: initial
+				flex-direction: column
+				.row
+					flex-direction: column
+					&:nth-child(2) .item,
+					&:nth-child(3) .item
+						width: 100%
+				.item
+					margin: 10px auto
 	&--asteroids-end
 		background:
 			image: url('../images/asteroids-end.png')
@@ -242,6 +262,26 @@
 			transition: all 0.3s ease-out
 			&:hover
 				cursor: help
+		@media only screen and (max-width: 40rem)
+			background:
+				size: contain
+			height: initial
+	&--youtube
+		.sector-title
+			font-family: $cantarell
+			font-size: 40px
+			text-transform: uppercase
+			b
+				font-family: $cantarell-bold
+				font-weight: 700
+		img
+			box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25)
+			margin: 10px 0
+		figure:hover
+			cursor: pointer
+		figcaption
+			font-size: 18px
+			padding: 20px 0
 
 @keyframes offset-planet
 	0%

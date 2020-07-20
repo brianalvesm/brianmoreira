@@ -59,6 +59,7 @@ a:active
 		background:
 			image: url('../images/space-bg-first-half-min.jpg')
 			position: top center
+			repeat-y: repeat
 		@include parallax(-1)
 
 .paragraph
@@ -72,3 +73,7 @@ a:active
 	text-align: left
 	@media only screen and (max-width: 40rem)
 		text-align: center
+
+@media print, screen and (max-width: 39.99875em)
+  .hide-for-small-only
+    display: none

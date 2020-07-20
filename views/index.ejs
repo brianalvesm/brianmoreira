@@ -3,7 +3,7 @@
 	<head>
 		<title><%= title %></title>
 		<link rel="stylesheet" href="/stylesheets/style.css" />
-		<link rel="stylesheet" href="stylesheets/foundation.css" />
+		<link rel="stylesheet" href="/stylesheets/foundation.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
@@ -15,13 +15,13 @@
 							<div class="cell">
 								<div class="hero-wrap">
 									<h1 class="logo"><img src="images/logo-brianmoreira-negative.png" alt="Logotipo Brian Moreira" title="Logotipo Brian Moreira"></h1>
-									<img src="images/home-planet.png" class="home-planet">
+									<img src="images/home-planet.png" class="home-planet hide-for-small-only">
 								</div>
 							</div>
 						</div>
 						<div class="grid-x grid-padding-x">
 							<div class="cell medium-3 medium-order-1 small-6 small-order-2">
-								<a href="#portfolio"><img src="images/sign-portfolio.png" class="signs" alt="Link para Porfolio" title="Link para Porfolio"></a>
+								<a href="#"><img src="images/sign-portfolio.png" class="signs" alt="Link para Porfolio" title="Link para Porfolio"></a>
 							</div>
 							<div class="cell medium-6 medium-order-2 small-12 small-order-1">
 								<div class="hero-wrap">
@@ -151,7 +151,6 @@
 						</div>
 					</div>
 				</section>
-				<div id="portfolio"></div>
 				<section class="sec sec--asteroid">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
@@ -197,20 +196,83 @@
 								</div>
 							</div>
 						</div>
+						<div class="cell">
+							<div class="demo-reel-wrap">
+								<div class="responsive-embed widescreen">
+									<iframe src="https://player.vimeo.com/video/386368290" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 				<section class="sec sec--asteroids-end">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
 							<div class="cell">
-								<a class="monolith"><img src="images/monolith.png"></a>
+								<a class="monolith" data-open="monolith-reveal"><img src="images/monolith.png"></a>
+								<div class="large reveal customized" id="monolith-reveal" data-reveal>
+									<div class="mask">
+										<div class="reveal-content">
+										  <h2 class="reveal-title">hey, você encontrou um easter-egg!</h2>
+										  <p class="paragraph">Você encontrou o monólito de <b>2001: Uma Odisseia no Espaço</b>.<br>
+										  	Para recompensar sua descoberta, digite <b>#medesculpedave</b> no campo<br>
+										  	chamado “secret code” do formulário caso esteja entrando em<br>
+										  contato para fazer um orçamento e receba 5% de desconto!</p>
+										</div>
+									</div>
+								  <button class="close-button" data-close aria-label="Close modal" type="button">
+								    <span aria-hidden="true">&times;</span>
+								  </button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="sec sec--youtube">
+					<div class="grid-container">
+						<div class="grid-x grid-padding-x">
+							<div class="cell">
+								<h2 class="sector-title"><b>Youtube</b> Channel</h2>
+								<p class="paragraph">Tenho um canal no Youtube onde faço análises e<br>
+									reflexões sobre arte e o mundo que a inspira.<br>
+								Apoie o projeto se inscrevendo no canal!</p>
+								<a href="https://www.youtube.com/channel/UCk8jr5xZEDF0CecQV01--Eg?view_as=subscriber?sub_confirmation=1" target="_blank" class="subscribe">Inscreva-se!</a>
+								<a href="https://www.youtube.com/channel/UCk8jr5xZEDF0CecQV01--Eg?view_as=subscriber?sub_confirmation=1" target="_blank"><img src="images/yotube-channel-banner.jpg" alt="Banner do canal do Youtube" title="Banner do canal do Youtube"></a>
+							</div>
+						</div>
+						<div class="grid-x grid-padding-x">
+							<div class="cell medium-4">
+								<figure class="showVideo" data-open="videoModal" data-video="https://www.youtube.com/embed/5YV_OTWr7tU">
+									<img src="images/yt-video-1.jpg" alt="Youtube video" title="Youtube video">
+									<figcaption>Analisando uma cena de Star Wars: O Despertar da Força</figcaption>
+								</figure>
+							</div>
+							<div class="cell medium-4">
+								<figure class="showVideo" data-open="videoModal" data-video="https://www.youtube.com/embed/boKQbE4I_-8">
+									<img src="images/yt-video-2.jpg" alt="Youtube video" title="Youtube video">
+									<figcaption>A Estética de Zack Snyder</figcaption>
+								</figure>
+							</div>
+							<div class="cell medium-4">
+								<figure class="showVideo" data-open="videoModal" data-video="https://www.youtube.com/embed/vMKl6hjPzls">
+									<img src="images/yt-video-3.jpg" alt="Youtube video" title="Youtube video">
+									<figcaption>A Genialidade de Black Mirror</figcaption>
+								</figure>
+							</div>
+							<div class="large reveal showVideo" id="videoModal" data-reveal>
+								<div class="responsive-embed widescreen"><iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
 							</div>
 						</div>
 					</div>
 				</section>
 			</main>
 		</div>
-		<script type="text/javascript" src="javascripts/jquery.min.js"></script>
-		<script type="text/javascript" src="javascripts/scripts.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
 	</body>
 </html>

@@ -61,6 +61,79 @@
     font-family: "cantarell-regular", sans-serif, "montserrat-light", sans-serif, sans-serif;
     margin-top: 10px; }
 
+.reveal.showVideo {
+  padding: 0; }
+
+.reveal.customized {
+  background-color: #14181d;
+  position: relative;
+  padding: 0;
+  background-image: url("../images/monolith-artwork.jpg");
+  background-position: top center; }
+  .reveal.customized#monolith-reveal {
+    height: 700px; }
+  .reveal.customized .mask {
+    overflow: hidden;
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, #14181d 0, rgba(20, 24, 29, 0.985565) 0.97%, rgba(20, 24, 29, 0.945131) 2.07833%, rgba(20, 24, 29, 0.883007) 3.29667%, rgba(20, 24, 29, 0.803499) 4.60167%, rgba(20, 24, 29, 0.710915) 5.96667%, rgba(20, 24, 29, 0.609563) 7.365%, rgba(20, 24, 29, 0.50375) 8.77167%, rgba(20, 24, 29, 0.397784) 10.16%, rgba(20, 24, 29, 0.295973) 11.505%, rgba(20, 24, 29, 0.202624) 12.78%, rgba(20, 24, 29, 0.122044) 13.95833%, rgba(20, 24, 29, 0.0585423) 15.01667%, rgba(20, 24, 29, 0.0164249) 15.92833%, rgba(20, 24, 29, 0) 16.66667%, rgba(20, 24, 29, 0) 83.33333%, rgba(20, 24, 29, 0.0164249) 84.07167%, rgba(20, 24, 29, 0.0585423) 84.98333%, rgba(20, 24, 29, 0.122044) 86.04167%, rgba(20, 24, 29, 0.202624) 87.22%, rgba(20, 24, 29, 0.295973) 88.495%, rgba(20, 24, 29, 0.397784) 89.84%, rgba(20, 24, 29, 0.50375) 91.22833%, rgba(20, 24, 29, 0.609563) 92.635%, rgba(20, 24, 29, 0.710915) 94.03333%, rgba(20, 24, 29, 0.803499) 95.39833%, rgba(20, 24, 29, 0.883007) 96.70333%, rgba(20, 24, 29, 0.945131) 97.92167%, rgba(20, 24, 29, 0.985565) 99.03%, #14181d), linear-gradient(0deg, #14181d 0, #14181d 21.48148%, rgba(20, 24, 29, 0.985565) 23.63704%, rgba(20, 24, 29, 0.945131) 26.1%, rgba(20, 24, 29, 0.883007) 28.80741%, rgba(20, 24, 29, 0.803499) 31.70741%, rgba(20, 24, 29, 0.710915) 34.74074%, rgba(20, 24, 29, 0.609563) 37.84815%, rgba(20, 24, 29, 0.50375) 40.97407%, rgba(20, 24, 29, 0.397784) 44.05926%, rgba(20, 24, 29, 0.295973) 47.04815%, rgba(20, 24, 29, 0.202624) 49.88148%, rgba(20, 24, 29, 0.122044) 52.5%, rgba(20, 24, 29, 0.0585423) 54.85185%, rgba(20, 24, 29, 0.0164249) 56.87778%, rgba(20, 24, 29, 0) 58.51852%); }
+  .reveal.customized .reveal-title {
+    font-family: "satisfy-regular", sans-serif;
+    font-size: 48px; }
+
+.reveal .close-button.medium,
+.reveal .close-button {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font-size: 2rem;
+  line-height: 1;
+  color: white; }
+
+.responsive-embed.widescreen,
+.flex-video.widescreen {
+  padding-bottom: 56.25%; }
+
+.responsive-embed,
+.flex-video {
+  position: relative;
+  height: 0;
+  padding-bottom: 75%;
+  overflow: hidden; }
+
+.responsive-embed iframe, .responsive-embed object, .responsive-embed embed, .responsive-embed video, .flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.demo-reel-wrap {
+  margin: 10px 10px 0; }
+
+.subscribe {
+  display: inline-block;
+  font-family: "montserrat-semibold", sans-serif;
+  font-size: 20px;
+  background: #F5B100;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  padding: 10px 40px;
+  margin: 40px auto; }
+
 .suite-animated {
   position: relative;
   z-index: -1; }
@@ -382,6 +455,7 @@ a:active {
     overflow: hidden;
     background-image: url("../images/space-bg-first-half-min.jpg");
     background-position: top center;
+    background-repeat-y: repeat;
     transform: translateZ(-1px) scale(2);
     z-index: -1000; }
 
@@ -397,6 +471,10 @@ a:active {
   @media only screen and (max-width: 40rem) {
     .left-to-center {
       text-align: center; } }
+
+@media print, screen and (max-width: 39.99875em) {
+  .hide-for-small-only {
+    display: none; } }
 
 .sec {
   position: relative;
@@ -435,16 +513,22 @@ a:active {
       .sec--hero .home-planet {
         width: initial; } }
     @media only screen and (max-width: 40rem) {
-      .sec--hero:after {
-        width: 140px;
-        height: 407px; }
-      .sec--hero .home-planet {
-        width: 40rem; }
-      .sec--hero .paragraph {
-        margin-top: 40px;
-        padding: 0; }
-      .sec--hero .signs {
-        width: 60%; } }
+      .sec--hero {
+        background-image: url("../images/home-planet.png");
+        background-size: 40rem;
+        background-position: top center; }
+        .sec--hero:after {
+          width: 140px;
+          height: 407px; }
+        .sec--hero .hero-wrap {
+          height: 260px; }
+        .sec--hero .paragraph {
+          margin-top: 40px;
+          padding: 0; }
+        .sec--hero .signs {
+          width: 60%; }
+        .sec--hero .grid-x:last-child {
+          top: initial; } }
   .sec--intro article {
     position: relative; }
     .sec--intro article img {
@@ -458,14 +542,14 @@ a:active {
   .sec--design .sector-title {
     margin: 0 auto;
     position: absolute;
-    font-family: "cantarell-regular", sans-serif, "montserrat-light", sans-serif, sans-serif;
+    font-family: "cantarell-regular", sans-serif;
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 16px;
     text-transform: uppercase;
     z-index: 1; }
     .sec--design .sector-title b {
-      font-family: "cantarell-bold", sans-serif, "montserrat-light", sans-serif, sans-serif;
+      font-family: "cantarell-bold", sans-serif;
       font-weight: 700; }
     @media only screen and (max-width: 40rem) {
       .sec--design .sector-title {
@@ -597,10 +681,10 @@ a:active {
           margin-top: 100px; } }
   .sec--portfolio {
     background-color: #4D1E35;
-    position: relative; }
+    position: relative;
+    padding: 0; }
     .sec--portfolio .portfolio-wrap {
-      position: absolute;
-      top: -900px;
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
@@ -608,7 +692,8 @@ a:active {
       .sec--portfolio .portfolio-wrap .row {
         display: flex;
         flex-wrap: wrap; }
-        .sec--portfolio .portfolio-wrap .row:nth-child(n+2) .item {
+        .sec--portfolio .portfolio-wrap .row:nth-child(2) .item,
+        .sec--portfolio .portfolio-wrap .row:nth-child(3) .item {
           width: calc(50% - 20px); }
       .sec--portfolio .portfolio-wrap .item {
         margin: 10px; }
@@ -626,6 +711,20 @@ a:active {
           height: 100%;
           object-fit: cover;
           object-position: 50% 50%; }
+    @media only screen and (max-width: 40rem) {
+      .sec--portfolio {
+        padding: 0; }
+        .sec--portfolio .portfolio-wrap {
+          position: relative;
+          top: initial;
+          flex-direction: column; }
+          .sec--portfolio .portfolio-wrap .row {
+            flex-direction: column; }
+            .sec--portfolio .portfolio-wrap .row:nth-child(2) .item,
+            .sec--portfolio .portfolio-wrap .row:nth-child(3) .item {
+              width: 100%; }
+          .sec--portfolio .portfolio-wrap .item {
+            margin: 10px auto; } }
   .sec--asteroids-end {
     background-image: url("../images/asteroids-end.png");
     background-position: top;
@@ -638,6 +737,25 @@ a:active {
       transition: all 0.3s ease-out; }
       .sec--asteroids-end .monolith:hover {
         cursor: help; }
+    @media only screen and (max-width: 40rem) {
+      .sec--asteroids-end {
+        background-size: contain;
+        height: initial; } }
+  .sec--youtube .sector-title {
+    font-family: "cantarell-regular", sans-serif;
+    font-size: 40px;
+    text-transform: uppercase; }
+    .sec--youtube .sector-title b {
+      font-family: "cantarell-bold", sans-serif;
+      font-weight: 700; }
+  .sec--youtube img {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin: 10px 0; }
+  .sec--youtube figure:hover {
+    cursor: pointer; }
+  .sec--youtube figcaption {
+    font-size: 18px;
+    padding: 20px 0; }
 
 @keyframes offset-planet {
   0% {

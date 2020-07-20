@@ -13,6 +13,81 @@
 		font-family: $cantarell, $montserrat, sans-serif
 		margin-top: 10px
 
+.reveal.showVideo
+	padding: 0
+
+.reveal.customized
+	background-color: #14181d
+	position: relative
+	padding: 0
+	background:
+		image: url('../images/monolith-artwork.jpg')
+		position: top center
+	&#monolith-reveal
+		height: 700px
+	.mask
+		overflow: hidden
+		width: 100%
+		height: 90%
+		margin: auto
+		display: flex
+		align-items: flex-end
+		justify-content: center
+		position: absolute
+		z-index: 0
+		pointer-events: none
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		background-repeat: no-repeat
+		background-image: linear-gradient(90deg,#14181d 0,rgba(20,24,29,.98556487) .97%,rgba(20,24,29,.9451312) 2.07833333%,rgba(20,24,29,.88300656) 3.29666667%,rgba(20,24,29,.80349854) 4.60166667%,rgba(20,24,29,.71091472) 5.96666667%,rgba(20,24,29,.60956268) 7.365%,rgba(20,24,29,.50375) 8.77166667%,rgba(20,24,29,.39778426) 10.16%,rgba(20,24,29,.29597303) 11.505%,rgba(20,24,29,.20262391) 12.78%,rgba(20,24,29,.12204446) 13.95833333%,rgba(20,24,29,.05854227) 15.01666667%,rgba(20,24,29,.01642493) 15.92833333%,rgba(20,24,29,0) 16.66666667%,rgba(20,24,29,0) 83.33333333%,rgba(20,24,29,.01642493) 84.07166667%,rgba(20,24,29,.05854227) 84.98333333%,rgba(20,24,29,.12204446) 86.04166667%,rgba(20,24,29,.20262391) 87.22%,rgba(20,24,29,.29597303) 88.495%,rgba(20,24,29,.39778426) 89.84%,rgba(20,24,29,.50375) 91.22833333%,rgba(20,24,29,.60956268) 92.635%,rgba(20,24,29,.71091472) 94.03333333%,rgba(20,24,29,.80349854) 95.39833333%,rgba(20,24,29,.88300656) 96.70333333%,rgba(20,24,29,.9451312) 97.92166667%,rgba(20,24,29,.98556487) 99.03%,#14181d),linear-gradient(0deg,#14181d 0,#14181d 21.48148148%,rgba(20,24,29,.98556487) 23.63703704%,rgba(20,24,29,.9451312) 26.1%,rgba(20,24,29,.88300656) 28.80740741%,rgba(20,24,29,.80349854) 31.70740741%,rgba(20,24,29,.71091472) 34.74074074%,rgba(20,24,29,.60956268) 37.84814815%,rgba(20,24,29,.50375) 40.97407407%,rgba(20,24,29,.39778426) 44.05925926%,rgba(20,24,29,.29597303) 47.04814815%,rgba(20,24,29,.20262391) 49.88148148%,rgba(20,24,29,.12204446) 52.5%,rgba(20,24,29,.05854227) 54.85185185%,rgba(20,24,29,.01642493) 56.87777778%,rgba(20,24,29,0) 58.51851852%)
+	.reveal-title
+		font-family: $satisfy
+		font-size: 48px
+
+.reveal
+	.close-button.medium,
+	.close-button
+		position: absolute
+		right: 1rem
+		top: 0.5rem
+		font-size: 2rem
+		line-height: 1
+		color: white
+
+.responsive-embed.widescreen,
+.flex-video.widescreen 
+	padding-bottom: 56.25%
+
+.responsive-embed,
+.flex-video 
+	position: relative
+	height: 0
+	padding-bottom: 75%
+	overflow: hidden
+
+.responsive-embed iframe, .responsive-embed object, .responsive-embed embed, .responsive-embed video, .flex-video iframe, .flex-video object, .flex-video embed, .flex-video video
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.demo-reel-wrap
+	margin: 10px 10px 0
+
+.subscribe
+	display: inline-block
+	font-family: $montserrat-semibold
+	font-size: 20px
+	background: #F5B100
+	border-radius: 4px
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25)
+	text-shadow: 0 2px 2px rgba(0,0,0,0.25)
+	text-decoration: none
+	padding: 10px 40px
+	margin: 40px auto
+
 .suite-animated
 	position: relative
 	z-index: -1
