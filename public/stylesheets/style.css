@@ -381,7 +381,6 @@ a:active {
     height: 100%;
     overflow: hidden;
     background-image: url("../images/space-bg-first-half-min.jpg");
-    background-size: cover;
     background-position: top center;
     transform: translateZ(-1px) scale(2);
     z-index: -1000; }
@@ -416,19 +415,22 @@ a:active {
       z-index: 0;
       right: 0;
       animation: offset-planet 120s ease-in-out alternate infinite; }
-    .sec--hero .logo-wrap {
+    .sec--hero .hero-wrap {
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative; }
-      .sec--hero .logo-wrap .logo {
+      position: relative;
+      height: 100%; }
+      .sec--hero .hero-wrap .logo {
         position: absolute;
         z-index: 1; }
     .sec--hero .home-planet {
       width: 1200px; }
     .sec--hero .paragraph {
-      margin-top: 80px;
       padding: 0 25px; }
+    .sec--hero .grid-x:last-child {
+      position: relative;
+      top: -100px; }
     @media only screen and (max-width: 80rem) {
       .sec--hero .home-planet {
         width: initial; } }
@@ -597,7 +599,7 @@ a:active {
     background-color: #4D1E35;
     position: relative; }
     .sec--portfolio .portfolio-wrap {
-      position: relative;
+      position: absolute;
       top: -900px;
       display: flex;
       flex-wrap: wrap;
@@ -624,6 +626,18 @@ a:active {
           height: 100%;
           object-fit: cover;
           object-position: 50% 50%; }
+  .sec--asteroids-end {
+    background-image: url("../images/asteroids-end.png");
+    background-position: top;
+    height: 1434px;
+    position: relative; }
+    .sec--asteroids-end .monolith {
+      position: relative;
+      right: -560px;
+      top: -60px;
+      transition: all 0.3s ease-out; }
+      .sec--asteroids-end .monolith:hover {
+        cursor: help; }
 
 @keyframes offset-planet {
   0% {

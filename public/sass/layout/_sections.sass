@@ -17,19 +17,22 @@
 			z-index: 0
 			right: 0
 			animation: offset-planet 120s ease-in-out alternate infinite
-		.logo-wrap
+		.hero-wrap
 			display: flex
 			align-items: center
 			justify-content: center
 			position: relative
+			height: 100%
 			.logo
 				position: absolute
 				z-index: 1
 		.home-planet
 			width: 1200px
 		.paragraph
-			margin-top: 80px
 			padding: 0 25px
+		.grid-x:last-child
+			position: relative
+			top: -100px
 		@media only screen and (max-width: 80rem)
 			.home-planet
 				width: initial
@@ -199,7 +202,7 @@
 		background-color: #4D1E35
 		position: relative
 		.portfolio-wrap
-			position: relative
+			position: absolute
 			top: -900px
 			display: flex
 			flex-wrap: wrap
@@ -226,6 +229,19 @@
 					height: 100%
 					object-fit: cover
 					object-position: 50% 50%
+	&--asteroids-end
+		background:
+			image: url('../images/asteroids-end.png')
+			position: top
+		height: 1434px
+		position: relative
+		.monolith
+			position: relative
+			right: -560px
+			top: -60px
+			transition: all 0.3s ease-out
+			&:hover
+				cursor: help
 
 @keyframes offset-planet
 	0%
