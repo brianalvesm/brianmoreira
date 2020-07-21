@@ -3,6 +3,7 @@
 	<head>
 		<title><%= title %></title>
 		<link rel="stylesheet" href="/stylesheets/style.css" />
+		<link rel="stylesheet" href="/stylesheets/motion-ui.min.css" />
 		<link rel="stylesheet" href="/stylesheets/foundation.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
@@ -197,11 +198,11 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="cell">
-							<div class="demo-reel-wrap">
-								<div class="responsive-embed widescreen">
-									<iframe src="https://player.vimeo.com/video/386368290" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<div class="cell">
+								<div class="demo-reel-wrap">
+									<div class="responsive-embed widescreen">
+										<iframe src="https://player.vimeo.com/video/386368290" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -212,7 +213,7 @@
 						<div class="grid-x grid-padding-x">
 							<div class="cell">
 								<a class="monolith" data-open="monolith-reveal"><img src="images/monolith.png"></a>
-								<div class="large reveal customized" id="monolith-reveal" data-reveal>
+								<div class="large reveal customized" id="monolith-reveal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
 									<div class="mask">
 										<div class="reveal-content">
 										  <h2 class="reveal-title">hey, você encontrou um easter-egg!</h2>
@@ -261,7 +262,7 @@
 									<figcaption>A Genialidade de Black Mirror</figcaption>
 								</figure>
 							</div>
-							<div class="large reveal showVideo" id="videoModal" data-reveal>
+							<div class="large reveal showVideo" id="videoModal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
 								<div class="responsive-embed widescreen"><iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 							  <button class="close-button" data-close aria-label="Close modal" type="button">
 							    <span aria-hidden="true">&times;</span>
