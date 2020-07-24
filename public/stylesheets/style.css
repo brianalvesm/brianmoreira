@@ -61,6 +61,45 @@
     font-family: "cantarell-regular", sans-serif, "montserrat-light", sans-serif, sans-serif;
     margin-top: 10px; }
 
+.tooltip-icon {
+  position: relative;
+  top: -6px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  color: #67D8EF;
+  background-color: #14181d;
+  padding: 2px;
+  font-size: 8px;
+  font-family: "montserrat-semibold", sans-serif; }
+
+.has-tooltip {
+  position: relative; }
+  .has-tooltip .tooltip {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 10px;
+    background-color: #14181d;
+    position: absolute;
+    bottom: 0;
+    padding: 10px; }
+    .has-tooltip .tooltip:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #14181d;
+      position: absolute;
+      bottom: -10px;
+      left: calc(50% - 5px); }
+    .has-tooltip .tooltip.show {
+      display: block;
+      visibility: visible;
+      opacity: 1; }
+
 .reveal.showVideo {
   padding: 0; }
 
@@ -611,7 +650,8 @@ a:active {
         padding-top: 500px; } }
   .sec--illustration {
     background-image: url("../images/planet-illustration.png");
-    background-position: top 100px left; }
+    background-position: top 100px left;
+    padding-bottom: 0; }
     .sec--illustration .sector-title {
       display: block;
       font-family: "satisfy-regular", sans-serif;
@@ -651,6 +691,12 @@ a:active {
       left: -10px; }
     .sec--illustration .sec-content {
       padding: 50px 100px 0 0; }
+    .sec--illustration .has-tooltip:hover {
+      border-bottom: 0.5px solid #bbb; }
+    .sec--illustration .tooltip {
+      width: 400px;
+      left: 50%;
+      bottom: 65px; }
     @media only screen and (max-width: 1280px) {
       .sec--illustration {
         background-size: contain;
@@ -676,11 +722,11 @@ a:active {
   .sec--asteroid {
     background-image: url("../images/asteroid.png");
     background-position: bottom;
-    height: 1810px;
-    padding-top: 350px; }
+    height: 1810px; }
     .sec--asteroid .sector-title {
       font-family: "satisfy-regular", sans-serif;
       font-size: 132px;
+      margin-top: 320px;
       -webkit-transform: rotate(-10deg);
       -moz-transform: rotate(-10deg);
       -ms-transform: rotate(-10deg);

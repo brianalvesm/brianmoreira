@@ -41,5 +41,13 @@ $(document).ready(function(){
     } // End if
   });
 
+  $(".has-tooltip").hover(
+  	function() {
+  		$(this).find(".tooltip").addClass('show');
+  	}, function() {
+  		$(this).find(".tooltip").removeClass('show');
+  	}
+  );
+
 	})(jQuery);
 });

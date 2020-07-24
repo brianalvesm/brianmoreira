@@ -111,6 +111,7 @@
 		background:
 			image: url('../images/planet-illustration.png')
 			position: top 100px left
+		padding-bottom: 0
 		.sector-title
 			display: block
 			font-family: $satisfy
@@ -150,6 +151,12 @@
 			left: -10px
 		.sec-content
 			padding: 50px 100px 0 0
+		.has-tooltip:hover
+			border-bottom: 0.5px solid #bbb
+		.tooltip
+			width: 400px
+			left: 50%
+			bottom: 65px
 		@media only screen and (max-width: 1280px)
 			background:
 				size: contain
@@ -177,10 +184,10 @@
 			image: url('../images/asteroid.png')
 			position: bottom
 		height: 1810px
-		padding-top: 350px
 		.sector-title
 			font-family: $satisfy
 			font-size: 132px
+			margin-top: 320px
 			@include rotate(-10deg) 
 			&:before
 				content: "Bem-vindo ao"

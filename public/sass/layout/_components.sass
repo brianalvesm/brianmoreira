@@ -13,6 +13,45 @@
 		font-family: $cantarell, $montserrat, sans-serif
 		margin-top: 10px
 
+.tooltip-icon
+	position: relative
+	top: -6px
+	display: inline-block
+	width: 12px
+	height: 12px
+	border-radius: 12px
+	color: #67D8EF
+	background-color: #14181d
+	padding: 2px
+	font-size: 8px
+	font-family: $montserrat-semibold
+
+.has-tooltip
+	position: relative
+	.tooltip
+		display: none
+		visibility: hidden
+		opacity: 0
+		border-radius: 10px
+		background-color: #14181d
+		position: absolute
+		bottom: 0
+		padding: 10px
+		&:after
+			content: ""
+			width: 0
+			height: 0
+			border-left: 10px solid transparent
+			border-right: 10px solid transparent
+			border-top: 10px solid #14181d
+			position: absolute
+			bottom: -10px
+			left: calc(50% - 5px)
+		&.show
+			display: block
+			visibility: visible
+			opacity: 1
+
 .reveal.showVideo
 	padding: 0
 
