@@ -895,7 +895,7 @@ a:active {
   .sec--contact {
     background-image: url("../images/brianville-futuristic-city.png");
     background-position: center bottom;
-    min-height: 1000px; }
+    padding-top: 300px; }
     @media only screen and (max-width: 40rem) {
       .sec--contact {
         background-size: 80rem; } }
