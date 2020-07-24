@@ -53,11 +53,24 @@
 				width: 60%
 			.grid-x:last-child
 				top: initial
-	&--intro article
-		position: relative
-		img
+	&--intro
+		article
+			position: relative
+			img
+				position: absolute
+				left: calc(50% - 253px/4)
+		.moron-mountain
 			position: absolute
-			left: calc(50% - 253px/4)
+			width: 50px
+			left: -15px
+			bottom: 0
+			opacity: 0.5
+			@include rotate(-30deg)
+			transition: all 0.3s ease-out
+			&:hover
+				cursor: help
+			&:focus
+				outline: none
 	&--design
 		.planet-design-wrap
 			display: flex
@@ -279,6 +292,8 @@
 			transition: all 0.3s ease-out
 			&:hover
 				cursor: help
+			&:focus
+				outline: none
 		@media only screen and (max-width: 40rem)
 			background:
 				size: contain

@@ -107,10 +107,12 @@
   background-color: #14181d;
   position: relative;
   padding: 0;
-  background-image: url("../images/monolith-artwork.jpg");
-  background-position: top center; }
+  background-position: top center;
+  height: 700px; }
   .reveal.customized#monolith-reveal {
-    height: 700px; }
+    background-image: url("../images/monolith-artwork.jpg"); }
+  .reveal.customized#moron-mountain-reveal {
+    background-image: url("../images/moron-mountain-artwork.jpg"); }
   .reveal.customized .mask {
     overflow: hidden;
     width: 100%;
@@ -601,6 +603,22 @@ a:active {
     .sec--intro article img {
       position: absolute;
       left: calc(50% - 253px/4); }
+  .sec--intro .moron-mountain {
+    position: absolute;
+    width: 50px;
+    left: -15px;
+    bottom: 0;
+    opacity: 0.5;
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    transition: all 0.3s ease-out; }
+    .sec--intro .moron-mountain:hover {
+      cursor: help; }
+    .sec--intro .moron-mountain:focus {
+      outline: none; }
   .sec--design .planet-design-wrap {
     display: flex;
     align-items: center;
@@ -822,6 +840,8 @@ a:active {
       transition: all 0.3s ease-out; }
       .sec--asteroids-end .monolith:hover {
         cursor: help; }
+      .sec--asteroids-end .monolith:focus {
+        outline: none; }
     @media only screen and (max-width: 40rem) {
       .sec--asteroids-end {
         background-size: contain;
