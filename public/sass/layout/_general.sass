@@ -41,6 +41,16 @@ a:link,
 a:active
 	color: inherit
 
+// Helpers
+.left-to-center
+	text-align: left
+	@media only screen and (max-width: 40rem)
+		text-align: center
+
+@media print, screen and (max-width: 39.99875em)
+  .hide-for-small-only
+    display: none
+
 .wrapper
 	margin: 0 auto
 	width: 100%
@@ -68,12 +78,36 @@ a:active
 	@media only screen and (max-width: 40rem)
 		font-size: 16px
 
-// Helpers
-.left-to-center
-	text-align: left
-	@media only screen and (max-width: 40rem)
-		text-align: center
+form.form
+	text-align: center
+	position: relative
+	top: 65px
+	textarea,
+	input
+		text-align: left
+		max-width: 466px
+		border-radius: 4px
+		box-shadow: 0 3px 3px 0 rgba(0,0,0,0.25)
+		margin: 0 auto 1rem
+	input
+		height: 50px
+		&[type="submit"]
+			@extend .subscribe
+			border: 0
+			margin-bottom: 0
+			&:hover
+				cursor: pointer
 
-@media print, screen and (max-width: 39.99875em)
-  .hide-for-small-only
-    display: none
+footer
+	background-color: #e94747
+	position: relative
+	.footer-content
+		position: absolute
+		top: -70px
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 20px 0
+		img
+			margin: 0 5px

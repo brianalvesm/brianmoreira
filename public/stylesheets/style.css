@@ -173,36 +173,6 @@
   padding: 10px 40px;
   margin: 40px auto; }
 
-form.form {
-  text-align: center;
-  position: relative;
-  top: 65px; }
-  form.form textarea,
-  form.form input {
-    text-align: left;
-    max-width: 466px;
-    border-radius: 4px;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.25);
-    margin: 0 auto 1rem; }
-  form.form input {
-    height: 50px; }
-    form.form input[type="submit"] {
-      border: 0;
-      margin-bottom: 0; }
-      form.form input[type="submit"]:hover {
-        cursor: pointer; }
-
-footer {
-  background-color: #e94747; }
-  footer .footer-content {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0; }
-    footer .footer-content img {
-      margin: 0 5px; }
-
 .suite-animated {
   position: relative;
   z-index: -1; }
@@ -507,6 +477,16 @@ a:link,
 a:active {
   color: inherit; }
 
+.left-to-center {
+  text-align: left; }
+  @media only screen and (max-width: 40rem) {
+    .left-to-center {
+      text-align: center; } }
+
+@media print, screen and (max-width: 39.99875em) {
+  .hide-for-small-only {
+    display: none; } }
+
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -535,15 +515,38 @@ a:active {
     .paragraph {
       font-size: 16px; } }
 
-.left-to-center {
-  text-align: left; }
-  @media only screen and (max-width: 40rem) {
-    .left-to-center {
-      text-align: center; } }
+form.form {
+  text-align: center;
+  position: relative;
+  top: 65px; }
+  form.form textarea,
+  form.form input {
+    text-align: left;
+    max-width: 466px;
+    border-radius: 4px;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.25);
+    margin: 0 auto 1rem; }
+  form.form input {
+    height: 50px; }
+    form.form input[type="submit"] {
+      border: 0;
+      margin-bottom: 0; }
+      form.form input[type="submit"]:hover {
+        cursor: pointer; }
 
-@media print, screen and (max-width: 39.99875em) {
-  .hide-for-small-only {
-    display: none; } }
+footer {
+  background-color: #e94747;
+  position: relative; }
+  footer .footer-content {
+    position: absolute;
+    top: -70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0; }
+    footer .footer-content img {
+      margin: 0 5px; }
 
 .sec {
   position: relative;
