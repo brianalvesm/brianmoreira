@@ -861,6 +861,15 @@ a:active {
   .sec--youtube figcaption {
     font-size: 18px;
     padding: 20px 0; }
+  .sec--ideology .sector-title {
+    margin: 0 auto;
+    font-family: "cantarell-regular", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 16px;
+    text-transform: uppercase; }
+  .sec--ideology .sector-topics {
+    font-family: "montserrat-semibold", sans-serif; }
   .sec--goodbye {
     background-image: url("../images/meteoro.png"); }
     .sec--goodbye .photo {
