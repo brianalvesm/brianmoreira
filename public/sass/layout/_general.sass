@@ -47,6 +47,17 @@ a:active
 	@media only screen and (max-width: 40rem)
 		text-align: center
 
+.switch-mobile div
+	&:first-child
+		display: block
+	&:last-child
+		display: none
+	@media print, screen and (max-width: 40em)
+		&:first-child
+			display: none
+		&:last-child
+			display: block
+
 @media print, screen and (max-width: 39.99875em)
   .hide-for-small-only
     display: none
@@ -95,8 +106,6 @@ form.form
 			@extend .subscribe
 			border: 0
 			margin-bottom: 0
-			&:hover
-				cursor: pointer
 
 footer
 	background-color: #e94747
