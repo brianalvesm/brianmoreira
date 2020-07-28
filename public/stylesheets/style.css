@@ -689,8 +689,7 @@ footer {
         padding-top: 500px; } }
   .sec--illustration {
     background-image: url("../images/planet-illustration.png");
-    background-position: top 100px left;
-    padding-bottom: 0; }
+    background-position: top 100px left; }
     .sec--illustration .sector-title {
       display: block;
       font-family: "satisfy-regular", sans-serif;
@@ -760,12 +759,12 @@ footer {
               text-align: center; } }
   .sec--asteroid {
     background-image: url("../images/asteroid.png");
-    background-position: bottom;
-    height: 1810px; }
+    background-position: bottom center;
+    height: 1562px; }
     .sec--asteroid .sector-title {
       font-family: "satisfy-regular", sans-serif;
       font-size: 132px;
-      margin-top: 320px;
+      margin-top: 120px;
       -webkit-transform: rotate(-10deg);
       -moz-transform: rotate(-10deg);
       -ms-transform: rotate(-10deg);
