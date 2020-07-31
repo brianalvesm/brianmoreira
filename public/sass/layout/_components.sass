@@ -56,13 +56,51 @@
 			visibility: visible
 			opacity: 1
 
+.gallery-cta-wrapper
+	position: relative
+	margin: 20px 10px 0
+	&:hover
+		cursor: pointer
+	.gallery-cta-title
+		font-family: $satisfy
+		font-size: 60px
+		line-height: 0.8
+	.gallery-cta-content
+		position: absolute
+		top: calc(50% - 34px)
+		width: 100%
+		z-index: 1
+		text-align: center
+
+.gallery
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+	overflow: auto
+	max-height: 80vh
+	li
+		height: 37vh
+		flex-grow: 1
+	img
+		object-fit: cover
+		max-height: 100%
+		min-width: 100%
+	&--cta
+		flex-wrap: nowrap
+		overflow: unset
+		height: 280px
+		img
+			object-position: bottom
+
+.reveal
+	background-color: #14181d !important
+	padding: 0 !important
+
 .reveal.showVideo
 	padding: 0
 
 .reveal.customized
-	background-color: #14181d
 	position: relative
-	padding: 0
 	background-position: top center
 	height: 700px
 	&#monolith-reveal
