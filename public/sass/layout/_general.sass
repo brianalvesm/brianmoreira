@@ -81,7 +81,7 @@ a:active
 			image: url('../images/space-bg-first-half-min.jpg')
 			position: top center
 			repeat-y: repeat
-		@include parallax(-0.1)
+		@include parallax(-0.3)
 
 .paragraph
 	font-size: 19px
@@ -100,12 +100,25 @@ form.form
 		border-radius: 4px
 		box-shadow: 0 3px 3px 0 rgba(0,0,0,0.25)
 		margin: 0 auto 1rem
+		position: relative
 	input
 		height: 50px
 		&[type="submit"]
 			@extend .subscribe
 			border: 0
 			margin-bottom: 0
+	.has-tooltip
+		display: block
+		max-width: 466px
+		margin: 0 auto
+		input
+			z-index: -1
+	.tooltip-icon
+		position: absolute
+		right: 12px
+		top: calc(50% - 7px)
+	.tooltip
+		bottom: 57px
 
 footer
 	background-color: #e94747

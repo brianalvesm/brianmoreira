@@ -17,14 +17,16 @@
 	position: relative
 	top: -6px
 	display: inline-block
-	width: 12px
-	height: 12px
+	width: 15px
+	height: 15px
 	border-radius: 12px
 	color: #67D8EF
 	background-color: #14181d
-	padding: 2px
+	padding: 3px 2px 2px
 	font-size: 8px
 	font-family: $montserrat-semibold
+	&:hover
+		cursor: pointer
 
 .has-tooltip
 	position: relative
@@ -32,6 +34,7 @@
 		display: none
 		visibility: hidden
 		opacity: 0
+		@include transition(500ms)
 		border-radius: 10px
 		background-color: #14181d
 		position: absolute
@@ -48,6 +51,7 @@
 			bottom: -10px
 			left: calc(50% - 5px)
 		&.show
+			@include transition(500ms)
 			display: block
 			visibility: visible
 			opacity: 1
