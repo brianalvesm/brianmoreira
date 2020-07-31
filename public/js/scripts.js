@@ -57,13 +57,21 @@ $(document).ready(function(){
         }
       });
 
-    $(".has-tooltip").hover(
+    $('.has-tooltip').hover(
     	function() {
-    		$(this).find(".tooltip").addClass('show');
+    		$(this).find('.tooltip').addClass('show');
     	}, function() {
-    		$(this).find(".tooltip").removeClass('show');
+    		$(this).find('.tooltip').removeClass('show');
     	}
     );
+
+    $('.item figure').click(function() {
+      $(this).toggleClass('figcaption');
+    });
+
+    $('.item figure').mouseleave(function() {
+      $(this).removeClass('figcaption');
+    });
 
 	})(jQuery);
 });

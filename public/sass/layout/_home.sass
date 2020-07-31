@@ -263,6 +263,52 @@
 					height: 100%
 					object-fit: cover
 					object-position: 50% 50%
+				figure
+					position: relative
+					overflow: hidden
+					border: 1px solid transparent
+					@include transition(200ms)
+					&:before
+						content: "+"
+						display: block
+						visibility: hidden
+						position: absolute
+						z-index: 1
+						top: -20px
+						left: 0
+						color: white
+						width: 20px
+						height: 20px
+						background: $behavior-color
+						font-family: $montserrat-semibold
+						font-size: 20px
+						line-height: 1.1
+						text-shadow: 1px 1px 2px rgba(0,0,0,0.3)
+						@include transition(200ms)
+					&:hover
+						cursor: pointer
+						border: 1px solid $behavior-color
+						&::before
+							@include transition(200ms)
+							visibility: visible
+							top: 0
+					figcaption
+						@include transition(400ms)
+						background: $behavior-color
+						position: absolute
+						width: 100%
+						height: 100%
+						right: 100%
+						top: 0
+						padding: 40px
+						.caption-title
+							font-family: $satisfy
+							font-size: 45px
+					&.figcaption figcaption
+						@include transition(400ms)
+						visibility: visible
+						right: 0
+
 		.demo-reel-wrap
 			margin: 10px 10px 0
 		@media only screen and (max-width: 40rem)
