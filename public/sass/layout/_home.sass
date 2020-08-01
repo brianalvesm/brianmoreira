@@ -304,10 +304,13 @@
 						.caption-title
 							font-family: $satisfy
 							font-size: 45px
-					&.figcaption figcaption
-						@include transition(400ms)
-						visibility: visible
-						right: 0
+					&.figcaption
+						&:before
+							@include rotate(45deg)
+						figcaption
+							@include transition(400ms)
+							visibility: visible
+							right: 0
 
 		.demo-reel-wrap
 			margin: 10px 10px 0

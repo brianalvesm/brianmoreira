@@ -952,6 +952,12 @@ footer {
             .sec--portfolio .portfolio-wrap .item figure figcaption .caption-title {
               font-family: "satisfy-regular", sans-serif;
               font-size: 45px; }
+          .sec--portfolio .portfolio-wrap .item figure.figcaption:before {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg); }
           .sec--portfolio .portfolio-wrap .item figure.figcaption figcaption {
             -webkit-transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1);
             -moz-transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1);
