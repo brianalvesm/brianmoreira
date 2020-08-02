@@ -233,8 +233,7 @@
     background-color: #5FB768; }
 
 .suite-animated {
-  position: relative;
-  z-index: -1; }
+  position: relative; }
   .suite-animated li {
     position: absolute;
     top: auto;
@@ -593,12 +592,11 @@ form.form {
     display: block;
     max-width: 466px;
     margin: 0 auto; }
-    form.form .has-tooltip input {
-      z-index: -1; }
   form.form .tooltip-icon {
     position: absolute;
     right: 12px;
-    top: calc(50% - 7px); }
+    top: calc(50% - 7px);
+    z-index: 1; }
   form.form .tooltip {
     bottom: 57px; }
 
@@ -608,6 +606,7 @@ footer {
   footer .footer-content {
     position: absolute;
     top: -70px;
+    left: 0;
     width: 100%;
     display: flex;
     align-items: center;
