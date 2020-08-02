@@ -503,20 +503,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   font-weight: initial; }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; }
-
-body {
-  overflow: auto;
-  perspective: 1px;
-  transform-style: preserve-3d; }
-  body, body * {
-    transform-style: preserve-3d; }
-
 section {
   width: 100%; }
   section:focus {
@@ -577,9 +563,7 @@ a:active {
     overflow: hidden;
     background-image: url("../images/space-bg-first-half-min.jpg");
     background-position: top center;
-    background-repeat-y: repeat;
-    transform: translateZ(-0.1px) scale(1.1);
-    z-index: -100; }
+    background-repeat-y: repeat; }
 
 .paragraph {
   font-size: 19px;
