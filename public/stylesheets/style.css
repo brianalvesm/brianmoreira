@@ -551,18 +551,25 @@ a:active {
   max-width: 1920px;
   overflow: hidden;
   position: relative; }
-  .wrapper:before {
+  .wrapper:before, .wrapper:after {
     content: "";
     display: block;
     position: absolute;
-    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    height: 79%;
+    overflow: hidden; }
+  .wrapper:before {
+    top: 0;
     background-image: url("../images/space-bg-first-half-min.jpg");
-    background-position: top center;
+    background-position: center top;
     background-repeat-y: repeat; }
+  .wrapper:after {
+    bottom: 0;
+    background-image: url("../images/space-bg-last-half-min.jpg");
+    background-position: center bottom;
+    background-repeat-y: no-repeat;
+    z-index: -1; }
 
 .paragraph {
   font-size: 19px;
@@ -1049,20 +1056,17 @@ footer {
         transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1); }
         .sec--goodbye .socialmedia img:hover {
           transform: rotate(-30deg); }
-  .sec--contact {
-    background-image: url("../images/brianville-2.png");
-    background-position: center bottom; }
-    .sec--contact .sector-title {
-      margin: 0 auto;
-      font-family: "cantarell-regular", sans-serif;
-      font-size: 70px;
-      font-weight: 400;
-      letter-spacing: 16px;
-      text-transform: uppercase;
-      margin-bottom: 50px; }
-    @media only screen and (max-width: 40rem) {
-      .sec--contact {
-        background-size: 80rem; } }
+  .sec--contact .sector-title {
+    margin: 0 auto;
+    font-family: "cantarell-regular", sans-serif;
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: 16px;
+    text-transform: uppercase;
+    margin-bottom: 50px; }
+  @media only screen and (max-width: 40rem) {
+    .sec--contact {
+      background-size: 80rem; } }
 
 @keyframes offset-planet {
   0% {
