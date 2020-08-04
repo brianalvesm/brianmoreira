@@ -2,56 +2,145 @@
 body, html
 	margin: 0
 	height: 100%
-	font: $font-style $font-weight #{$font-size}/#{$line-height} $font-family
+	font: normal normal 14px/1.5 $montserrat
+	background-color: black
+	color: white
+	line-height: 1.5
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
 
-a 
-	color: $link
+*
+	background-repeat: no-repeat
+	text-align: center
+	&:after,
+	&:before
+		background-repeat: no-repeat
 
-h1
-	color: $font-color
-	margin-top: 0
-
-// PAGE "WORK IN PROGRESS"
-.page-wip .wrapper
-	background:
-		image: url('../../images/page-wip-background.jpg')
-		repeat: no-repeat
-		position: center 100px
-		size: auto
+h1,h2,h3,h4,h5,h6
 	margin: 0 auto
-	height: auto
-	min-height: 100%
-	.hero-section
+	font-weight: initial
+
+// @include parallax-init
+
+section
+	width: 100%
+	&:focus
+		outline: none
+
+ul
+	padding-left: 0
+	li
+		list-style: none
+
+b
+	font-family: $montserrat-semibold
+
+i
+	font-family: $montserrat-italic
+
+a,
+a:link,
+a:active
+	color: inherit
+
+// Helpers
+.left-to-center
+	text-align: left
+	@media only screen and (max-width: 40rem)
+		text-align: center
+
+.switch-mobile div
+	&:first-child
+		display: block
+	&:last-child
+		display: none
+	@media print, screen and (max-width: 40em)
+		&:first-child
+			display: none
+		&:last-child
+			display: block
+
+@media print, screen and (max-width: 39.99875em)
+  .hide-for-small-only
+    display: none
+
+.wrapper
+	margin: 0 auto
+	width: 100%
+	max-width: 1920px
+	overflow: hidden
+	position: relative
+	&:before,
+	&:after
+		content: ""
+		display: block
 		position: absolute
-		top: 100px
-		left: 25%
-		h1
-			font:
-				family: 'Caveat', cursive
-				weight: 700
-				size: 80px
-			margin-bottom: 0
-			color: #7DC1D9
-	.wip-description
-		width: 520px
-
-@media only screen and (max-width: 1024px)
-	.page-wip .wrapper .hero-section
-		top: 0
 		left: 0
-		padding: 80px
+		width: 100%
+		height: 79%
+		overflow: hidden
+	&:before
+		top: 0
+		background:
+			image: url('../images/space-bg-first-half-min.jpg')
+			position: center top
+			repeat-y: repeat
+	&:after
+		bottom: 0
+		background:
+			image: url('../images/space-bg-last-half-min.jpg')
+			position: center bottom
+			repeat-y: no-repeat
+		z-index: -1
+		// @include parallax(-0.1)
 
-@media only screen and (max-width: 768px)
-	.page-wip .wrapper
-		background: none
-		.hero-section
-			padding: 40px 40px 145px
-			background:
-				image: url('../../images/page-wip-background.jpg')
-				repeat: no-repeat
-				position: center bottom
-				size: contain
-			h1
-				font-size: 40px
-		.wip-description
-			width: auto
+.paragraph
+	font-size: 19px
+	font-weight: 300
+	@media only screen and (max-width: 40rem)
+		font-size: 16px
+
+form.form
+	text-align: center
+	position: relative
+	top: 65px
+	textarea,
+	input
+		text-align: left
+		max-width: 466px
+		border-radius: 4px
+		box-shadow: 0 3px 3px 0 rgba(0,0,0,0.25)
+		margin: 0 auto 1rem
+		position: relative
+	input
+		height: 50px
+		&[type="submit"]
+			@extend .subscribe
+			border: 0
+			margin-bottom: 0
+	.has-tooltip
+		display: block
+		max-width: 466px
+		margin: 0 auto
+	.tooltip-icon
+		position: absolute
+		right: 12px
+		top: calc(50% - 7px)
+		z-index: 1
+	.tooltip
+		bottom: 57px
+
+footer
+	background-color: #e94747
+	position: relative
+	.footer-content
+		position: absolute
+		top: -70px
+		left: 0
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 20px 0
+		img
+			margin: 0 5px
