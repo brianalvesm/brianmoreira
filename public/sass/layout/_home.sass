@@ -42,8 +42,8 @@
 				size: 40rem
 				position: top center
 			&:after
-				width: 140px
-				height: 407px
+				width: 70px
+				height: 203px
 			.hero-wrap
 				height: 260px
 			.paragraph
@@ -71,6 +71,8 @@
 				cursor: help
 			&:focus
 				outline: none
+		@media only screen and (max-width: 40rem)
+			padding: 125px 0
 	&--design
 		.planet-design-wrap
 			display: flex
@@ -183,7 +185,7 @@
 			background:
 				position: top -100px center
 				size: 40rem
-			padding-top: 350px
+			padding: 350px 0 0
 			.sector-title
 				font-size: 46px
 				text-align: center
@@ -218,7 +220,8 @@
 			height: 725px
 			padding-top: 250px
 			.sector-title
-				font-size: 40px
+				font-size: 44px
+				margin-top: 70px
 				&:before
 					font-size: 20px
 					color: inherit
@@ -311,7 +314,6 @@
 							@include transition(400ms)
 							visibility: visible
 							right: 0
-
 		.demo-reel-wrap
 			margin: 10px 10px 0
 		@media only screen and (max-width: 40rem)
@@ -327,6 +329,12 @@
 						width: 100%
 				.item
 					margin: 10px auto
+					figure
+						figcaption
+							padding: 10px
+							overflow-y: auto
+							.caption-title
+								font-size: 25px
 	&--asteroids-end
 		background:
 			image: url('../images/asteroids-end.png')
@@ -346,6 +354,11 @@
 			background:
 				size: contain
 			height: initial
+			.monolith
+				position: absolute
+				right: 64px
+				top: 33px
+				width: 20px
 	&--youtube
 		.sector-title
 			font-family: $cantarell
@@ -376,6 +389,11 @@
 			text-transform: uppercase
 		.sector-topics
 			font-family: $montserrat-semibold
+		@media only screen and (max-width: 40rem)
+			.sector-title
+				font-size: 30px
+			.sector-topics
+				font-size: 16px
 	&--goodbye
 		background:
 			image: url('../images/meteoro.png')
@@ -397,6 +415,7 @@
 			position: relative
 			top: -85px
 			height: 50px
+			line-height: 1.2
 		.socialmedia
 			display: inline-flex
 			img
@@ -405,10 +424,13 @@
 				@include transition(250ms)
 				&:hover
 					transform: rotate(-30deg)
+		@media only screen and (max-width: 40rem)
+			.photo
+				width: 300px
+				height: 300px
+			h2
+				font-size: 48px
 	&--contact
-		// background:
-		// 	image: url('../images/brianville-2.png')
-		// 	position: center bottom
 		.sector-title
 			margin: 0 auto
 			font-family: $cantarell
@@ -419,6 +441,8 @@
 			margin-bottom: 50px
 		@media only screen and (max-width: 40rem)
 			background-size: 80rem
+			.sector-title
+				font-size: 35px
 
 @keyframes offset-planet
 	0%

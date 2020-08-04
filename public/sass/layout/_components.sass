@@ -60,6 +60,9 @@
 	position: relative
 	margin: 20px 10px
 	overflow: hidden
+	display: flex
+	align-items: center
+	justify-content: center
 	&:hover
 		cursor: pointer
 	.gallery-cta-title
@@ -68,10 +71,13 @@
 		line-height: 0.8
 	.gallery-cta-content
 		position: absolute
-		top: calc(50% - 34px)
+		// top: calc(50% - 34px)
 		width: 100%
 		z-index: 1
 		text-align: center
+	@media only screen and (max-width: 40rem)
+		.gallery-cta-title
+			font-size: 40px
 
 .gallery
 	margin: 0 auto
@@ -92,6 +98,10 @@
 		height: 280px
 		img
 			object-position: bottom
+	@media only screen and (max-width: 40rem)
+		li,
+		&--cta
+			height: initial
 
 .reveal
 	background-color: #14181d !important
@@ -127,6 +137,15 @@
 	.reveal-title
 		font-family: $satisfy
 		font-size: 48px
+		line-height: 1.2
+	@media only screen and (max-width: 40rem)
+		.mask
+			height: 100%
+		.reveal-content
+			padding: 20px
+			.reveal-title
+				font-size: 42px
+				margin-bottom: 20px
 
 .reveal
 	.close-button.medium,
