@@ -583,7 +583,8 @@ a:active {
     top: 0;
     background-image: url("../images/space-bg-first-half-min.jpg");
     background-position: center top;
-    background-repeat-y: repeat; }
+    background-repeat-y: repeat;
+    background-size: contain; }
   .wrapper:after {
     bottom: 0;
     background-image: url("../images/space-bg-last-half-min.jpg");
@@ -812,7 +813,7 @@ footer {
       position: relative;
       left: -10px; }
     .sec--illustration .sec-content {
-      padding: 50px 50px 0; }
+      padding: 50px 20px 0 0; }
     .sec--illustration .has-tooltip:hover {
       border-bottom: 0.5px solid #bbb; }
     .sec--illustration .tooltip {
