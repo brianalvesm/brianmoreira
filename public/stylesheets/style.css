@@ -576,7 +576,7 @@ a:active {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 78%;
     overflow: hidden;
     z-index: -1; }
   .wrapper:before {
@@ -694,7 +694,8 @@ footer {
         background-position: top center; }
         .sec--hero:after {
           width: 70px;
-          height: 203px; }
+          height: 203px;
+          background-image: url("../images/offset-planet-min.webp"); }
         .sec--hero .hero-wrap {
           height: 260px; }
         .sec--hero .paragraph {
