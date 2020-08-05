@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Brian Moreira - Designer & Desenvolvedor front-end freelancer aprendendo ilustração e animação 2D' });
+  res.render('index', { title: 'Brian Moreira | Designer, Coder & Artista Freelancer' });
 });
 
 /* GET about page. */
