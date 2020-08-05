@@ -581,10 +581,13 @@ a:active {
     z-index: -1; }
   .wrapper:before {
     top: 0;
-    background-image: url("../images/space-bg-first-half-min.jpg");
+    background-image: url("../images/space-bg-first-half-min.webp");
     background-position: center top;
     background-repeat-y: repeat;
-    background-size: contain; }
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain; }
   .wrapper:after {
     bottom: 0;
     background-image: url("../images/space-bg-last-half-min.jpg");
@@ -747,7 +750,7 @@ footer {
         left: initial;
         font-size: 36px; } }
   .sec--web {
-    background-image: url("../images/planet-web.png");
+    background-image: url("../images/planet-web.webp");
     background-position: top right;
     margin-bottom: 250px; }
     .sec--web .planet-web-wrap .sector-title {
