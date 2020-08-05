@@ -567,15 +567,17 @@ a:active {
   width: 100%;
   max-width: 1920px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  z-index: 0; }
   .wrapper:before, .wrapper:after {
     content: "";
     display: block;
     position: absolute;
     left: 0;
     width: 100%;
-    height: 79%;
-    overflow: hidden; }
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; }
   .wrapper:before {
     top: 0;
     background-image: url("../images/space-bg-first-half-min.jpg");
@@ -585,8 +587,7 @@ a:active {
     bottom: 0;
     background-image: url("../images/space-bg-last-half-min.jpg");
     background-position: center bottom;
-    background-repeat-y: no-repeat;
-    z-index: -1; }
+    background-repeat-y: no-repeat; }
 
 .paragraph {
   font-size: 19px;
