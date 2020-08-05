@@ -138,6 +138,7 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
   overflow: auto;
   max-height: 80vh; }
   .gallery li {
@@ -684,7 +685,7 @@ footer {
         width: initial; } }
     @media only screen and (max-width: 40rem) {
       .sec--hero {
-        background-image: url("../images/home-planet.png");
+        background-image: url("../images/home-planet-min.png");
         background-size: 40rem;
         background-position: top center; }
         .sec--hero:after {
@@ -841,7 +842,7 @@ footer {
             .sec--illustration .sector-title + .rating span {
               text-align: center; } }
   .sec--asteroid {
-    background-image: url("../images/asteroid.png");
+    background-image: url("../images/asteroid.webp");
     background-position: bottom center;
     height: 1562px; }
     .sec--asteroid .sector-title {
@@ -1009,7 +1010,7 @@ footer {
               .sec--portfolio .portfolio-wrap .item figure figcaption .caption-title {
                 font-size: 25px; } }
   .sec--asteroids-end {
-    background-image: url("../images/asteroids-end.png");
+    background-image: url("../images/asteroids-end.webp");
     background-position: top;
     height: 1434px;
     position: relative; }
