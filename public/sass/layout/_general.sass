@@ -69,18 +69,7 @@ a:active
 	overflow: hidden
 	position: relative
 	z-index: 0
-	&:before,
-	&:after
-		content: ""
-		display: block
-		position: absolute
-		left: 0
-		width: 100%
-		height: 78%
-		overflow: hidden
-		z-index: -1
-	&:before
-		top: 0
+	.bg--first-half
 		background:
 			image: url('../images/space-bg-first-half-min.webp')
 			position: center top
@@ -89,10 +78,9 @@ a:active
 		-webkit-background-size: contain
 		-moz-background-size: contain
 		-o-background-size: contain
-	&:after
-		bottom: 0
+	.bg--last-half
 		background:
-			image: url('../images/space-bg-last-half-min.jpg')
+			image: url('../images/space-bg-last-half-min.webp')
 			position: center bottom
 			repeat-y: no-repeat
 
