@@ -397,8 +397,17 @@
 			.sector-topics
 				font-size: 16px
 	&--goodbye
-		background:
-			image: url('../images/meteoro.png')
+		.meteor-animation
+			position: absolute
+			top: 0
+			width: 230px
+			height: 91px
+			background:
+				image: url('../images/meteor-sprite-min.png')
+				size: 230px 455px
+				position: 0 0
+			overflow: hidden
+			animation: meteor-loop 450ms infinite step-start, meteor-trajectory 60s infinite linear
 		.photo
 			display: block
 			position: relative
@@ -451,3 +460,38 @@
 		transform: translateY(0px)
 	100%
 		transform: translateY(200px)
+
+@keyframes meteor-loop
+	0%
+		background-position: 0 0
+	20%
+		background-position: 0 calc(-182px / 2)
+	40%
+		background-position: 0 calc(-364px / 2)
+	60%
+		background-position: 0 calc(-546px / 2)
+	80%
+		background-position: 0 calc(-728px / 2)
+
+@keyframes meteor-trajectory
+	0%
+		transform: rotate(-10deg)
+		opacity: 0
+		left: -230px
+		top: 100px
+	10%
+		opacity: 1
+	40%
+		top: 10px
+	50%
+		top: 0
+		transform: rotate(10deg)
+	60%
+		top: 10px
+	90%
+		opacity: 1
+	100%
+		transform: rotate(30deg)
+		opacity: 0
+		left: 100%
+		top: 100px

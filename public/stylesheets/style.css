@@ -1063,44 +1063,52 @@ footer {
       font-size: 30px; }
     .sec--ideology .sector-topics {
       font-size: 16px; } }
-  .sec--goodbye {
-    background-image: url("../images/meteoro.png"); }
+  .sec--goodbye .meteor-animation {
+    position: absolute;
+    top: 0;
+    width: 230px;
+    height: 91px;
+    background-image: url("../images/meteor-sprite-min.png");
+    background-size: 230px 455px;
+    background-position: 0 0;
+    overflow: hidden;
+    animation: meteor-loop 450ms infinite step-start, meteor-trajectory 60s infinite linear; }
+  .sec--goodbye .photo {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 200px;
+    background-image: url("../images/brian-moreira-photo.jpg");
+    background-position: center left -65px;
+    background-size: cover; }
+  .sec--goodbye h2 {
+    font-family: "satisfy-regular", sans-serif;
+    font-size: 68px;
+    position: relative;
+    top: -85px;
+    height: 50px;
+    line-height: 1.2; }
+  .sec--goodbye .socialmedia {
+    display: inline-flex; }
+    .sec--goodbye .socialmedia img {
+      width: 48px;
+      margin: 10px;
+      -webkit-transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1);
+      -moz-transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1);
+      -ms-transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1);
+      -o-transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1);
+      transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1); }
+      .sec--goodbye .socialmedia img:hover {
+        transform: rotate(-30deg); }
+  @media only screen and (max-width: 40rem) {
     .sec--goodbye .photo {
-      display: block;
-      position: relative;
-      overflow: hidden;
-      width: 400px;
-      height: 400px;
-      margin: 0 auto;
-      border-radius: 200px;
-      background-image: url("../images/brian-moreira-photo.jpg");
-      background-position: center left -65px;
-      background-size: cover; }
+      width: 300px;
+      height: 300px; }
     .sec--goodbye h2 {
-      font-family: "satisfy-regular", sans-serif;
-      font-size: 68px;
-      position: relative;
-      top: -85px;
-      height: 50px;
-      line-height: 1.2; }
-    .sec--goodbye .socialmedia {
-      display: inline-flex; }
-      .sec--goodbye .socialmedia img {
-        width: 48px;
-        margin: 10px;
-        -webkit-transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1);
-        -moz-transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1);
-        -ms-transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1);
-        -o-transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1);
-        transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1); }
-        .sec--goodbye .socialmedia img:hover {
-          transform: rotate(-30deg); }
-    @media only screen and (max-width: 40rem) {
-      .sec--goodbye .photo {
-        width: 300px;
-        height: 300px; }
-      .sec--goodbye h2 {
-        font-size: 48px; } }
+      font-size: 48px; } }
   .sec--contact .sector-title {
     margin: 0 auto;
     font-family: "cantarell-regular", sans-serif;
@@ -1120,3 +1128,38 @@ footer {
     transform: translateY(0px); }
   100% {
     transform: translateY(200px); } }
+
+@keyframes meteor-loop {
+  0% {
+    background-position: 0 0; }
+  20% {
+    background-position: 0 calc(-182px / 2); }
+  40% {
+    background-position: 0 calc(-364px / 2); }
+  60% {
+    background-position: 0 calc(-546px / 2); }
+  80% {
+    background-position: 0 calc(-728px / 2); } }
+
+@keyframes meteor-trajectory {
+  0% {
+    transform: rotate(-10deg);
+    opacity: 0;
+    left: -230px;
+    top: 100px; }
+  10% {
+    opacity: 1; }
+  40% {
+    top: 10px; }
+  50% {
+    top: 0;
+    transform: rotate(10deg); }
+  60% {
+    top: 10px; }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: rotate(30deg);
+    opacity: 0;
+    left: 100%;
+    top: 100px; } }
