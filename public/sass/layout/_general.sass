@@ -2,12 +2,22 @@
 body, html
 	margin: 0
 	height: 100%
-	font: normal normal 14px/1.5 $montserrat
+	font-style: normal
+	font-variant: normal
+	font-weight: normal
+	font-family: $montserrat
 	background-color: black
 	color: white
 	line-height: 1.5
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
+
+html
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	font-size: 100%
+	line-height: 1.15
+	-webkit-text-size-adjust: 100%
 
 *
 	background-repeat: no-repeat
@@ -71,7 +81,7 @@ a:active
 	z-index: 0
 	.bg--first-half
 		background:
-			image: url('../images/space-bg-first-half-min.webp')
+			image: url('../../images/space-bg-first-half-min.webp')
 			position: center top
 			repeat-y: repeat
 			size: contain
@@ -80,7 +90,7 @@ a:active
 		-o-background-size: contain
 	.bg--last-half
 		background:
-			image: url('../images/space-bg-last-half-min.webp')
+			image: url('../../images/space-bg-last-half-min.webp')
 			position: center bottom
 			repeat-y: no-repeat
 

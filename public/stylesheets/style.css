@@ -1,56 +1,56 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'montserrat-light';
-  src: url("../fonts/montserrat-light-webfont.woff2") format("woff2"), url("../fonts/montserrat-light-webfont.woff") format("woff");
+  src: url("../../fonts/montserrat-light-webfont.woff2") format("woff2"), url("../../fonts/montserrat-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'montserrat-lightitalic';
-  src: url("../fonts/montserrat-lightitalic-webfont.woff2") format("woff2"), url("../fonts/montserrat-lightitalic-webfont.woff") format("woff");
+  src: url("../../fonts/montserrat-lightitalic-webfont.woff2") format("woff2"), url("../../fonts/montserrat-lightitalic-webfont.woff") format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
   font-family: 'montserrat-medium';
-  src: url("../fonts/montserrat-medium-webfont.woff2") format("woff2"), url("../fonts/montserrat-medium-webfont.woff") format("woff");
+  src: url("../../fonts/montserrat-medium-webfont.woff2") format("woff2"), url("../../fonts/montserrat-medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'montserrat-mediumitalic';
-  src: url("../fonts/montserrat-mediumitalic-webfont.woff2") format("woff2"), url("../fonts/montserrat-mediumitalic-webfont.woff") format("woff");
+  src: url("../../fonts/montserrat-mediumitalic-webfont.woff2") format("woff2"), url("../../fonts/montserrat-mediumitalic-webfont.woff") format("woff");
   font-weight: 500;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
   font-family: 'montserrat-semibold';
-  src: url("../fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("../fonts/montserrat-semibold-webfont.woff") format("woff");
+  src: url("../../fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("../../fonts/montserrat-semibold-webfont.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'cantarell-regular';
-  src: url("../fonts/cantarell-regular-webfont.woff2") format("woff2"), url("../fonts/cantarell-regular-webfont.woff") format("woff");
+  src: url("../../fonts/cantarell-regular-webfont.woff2") format("woff2"), url("../../fonts/cantarell-regular-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'cantarell-bold';
-  src: url("../fonts/cantarell-bold-webfont.woff2") format("woff2"), url("../fonts/cantarell-bold-webfont.woff") format("woff");
+  src: url("../../fonts/cantarell-bold-webfont.woff2") format("woff2"), url("../../fonts/cantarell-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'satisfy-regular';
-  src: url("../fonts/satisfy-regular-webfont.woff2") format("woff2"), url("../fonts/satisfy-regular-webfont.woff") format("woff");
+  src: url("../../fonts/satisfy-regular-webfont.woff2") format("woff2"), url("../../fonts/satisfy-regular-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
@@ -178,9 +178,9 @@
   background-position: top center;
   height: 700px; }
   .reveal.customized#monolith-reveal {
-    background-image: url("../images/monolith-artwork.jpg"); }
+    background-image: url("../../images/monolith-artwork.jpg"); }
   .reveal.customized#moron-mountain-reveal {
-    background-image: url("../images/moron-mountain-artwork.jpg"); }
+    background-image: url("../../images/moron-mountain-artwork.jpg"); }
   .reveal.customized .mask {
     overflow: hidden;
     width: 100%;
@@ -511,12 +511,22 @@
 body, html {
   margin: 0;
   height: 100%;
-  font: normal normal 14px/1.5 "montserrat-light", sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: "montserrat-light", sans-serif;
   background-color: black;
   color: white;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%; }
 
 * {
   background-repeat: no-repeat;
@@ -579,7 +589,7 @@ a:active {
   position: relative;
   z-index: 0; }
   .wrapper .bg--first-half {
-    background-image: url("../images/space-bg-first-half-min.webp");
+    background-image: url("../../images/space-bg-first-half-min.webp");
     background-position: center top;
     background-repeat-y: repeat;
     background-size: contain;
@@ -587,7 +597,7 @@ a:active {
     -moz-background-size: contain;
     -o-background-size: contain; }
   .wrapper .bg--last-half {
-    background-image: url("../images/space-bg-last-half-min.webp");
+    background-image: url("../../images/space-bg-last-half-min.webp");
     background-position: center bottom;
     background-repeat-y: no-repeat; }
 
@@ -650,7 +660,7 @@ footer {
 
 .sec {
   position: relative;
-  padding: 250px 0; }
+  padding: 225px 0; }
   .sec--hero {
     padding-top: 0; }
     .sec--hero:after {
@@ -658,7 +668,7 @@ footer {
       display: block;
       width: 280px;
       height: 814px;
-      background-image: url("../images/offset-planet.png");
+      background-image: url("../../images/offset-planet.png");
       background-size: contain;
       background-position: center right;
       position: absolute;
@@ -686,13 +696,13 @@ footer {
         width: initial; } }
     @media only screen and (max-width: 40rem) {
       .sec--hero {
-        background-image: url("../images/home-planet-min.png");
+        background-image: url("../../images/home-planet-min.png");
         background-size: 40rem;
         background-position: top center; }
         .sec--hero:after {
           width: 70px;
           height: 203px;
-          background-image: url("../images/offset-planet-min.webp"); }
+          background-image: url("../../images/offset-planet-min.webp"); }
         .sec--hero .hero-wrap {
           height: 260px; }
         .sec--hero .paragraph {
@@ -748,7 +758,7 @@ footer {
         left: initial;
         font-size: 36px; } }
   .sec--web {
-    background-image: url("../images/planet-web.webp");
+    background-image: url("../../images/planet-web.webp");
     background-position: top right;
     margin-bottom: 250px; }
     .sec--web .planet-web-wrap .sector-title {
@@ -759,7 +769,7 @@ footer {
         display: block;
         width: 341px;
         height: 188px;
-        background-image: url("../images/flying-saucer.png");
+        background-image: url("../../images/flying-saucer.png");
         position: absolute;
         top: -110px;
         left: -110px; }
@@ -774,7 +784,7 @@ footer {
         background-size: 32rem;
         padding-top: 500px; } }
   .sec--illustration {
-    background-image: url("../images/planet-illustration.png");
+    background-image: url("../../images/planet-illustration.png");
     background-position: top 100px left; }
     .sec--illustration .sector-title {
       display: block;
@@ -845,7 +855,7 @@ footer {
             .sec--illustration .sector-title + .rating span {
               text-align: center; } }
   .sec--asteroid {
-    background-image: url("../images/asteroid.webp");
+    background-image: url("../../images/asteroid.webp");
     background-position: bottom center;
     height: 1562px; }
     .sec--asteroid .sector-title {
@@ -1013,7 +1023,7 @@ footer {
               .sec--portfolio .portfolio-wrap .item figure figcaption .caption-title {
                 font-size: 25px; } }
   .sec--asteroids-end {
-    background-image: url("../images/asteroids-end.webp");
+    background-image: url("../../images/asteroids-end.webp");
     background-position: top;
     height: 1434px;
     position: relative; }
@@ -1077,7 +1087,7 @@ footer {
     top: 0;
     width: 230px;
     height: 91px;
-    background-image: url("../images/meteor-sprite-min.png");
+    background-image: url("../../images/meteor-sprite-min.png");
     background-size: 230px 455px;
     background-position: 0 0;
     overflow: hidden;
@@ -1090,7 +1100,7 @@ footer {
     height: 400px;
     margin: 0 auto;
     border-radius: 200px;
-    background-image: url("../images/brian-moreira-photo.jpg");
+    background-image: url("../../images/brian-moreira-photo.jpg");
     background-position: center left -65px;
     background-size: cover; }
   .sec--goodbye h2 {
