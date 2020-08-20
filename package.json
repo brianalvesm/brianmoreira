@@ -17,8 +17,10 @@
   },
   "devDependencies": {
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
     "gulp-notify": "^3.2.0",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.14.1"
   }
 }
