@@ -5,6 +5,7 @@ const gulp = require('gulp'),
 	notify = require('gulp-notify'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
+	imagemin = require('gulp-imagemin'),
 	cleanCSS = require('gulp-clean-css'),
 	autoprefixer = require('gulp-autoprefixer'),
 	pipeline = require('readable-stream').pipeline;
@@ -31,6 +32,16 @@ gulp.task('compress', function () {
     concat('scripts.min.js'),
     gulp.dest('./public/js/dist/')
   );
+});
+
+gulp.task('image-min', function () {
+	return gulp.src('./public/images/**/*')
+		.pipe(imagemin([
+	    imagemin.gifsicle({interlaced: true}),
+	    imagemin.mozjpeg({quality: 75, progressive: true}),
+	    imagemin.optipng({optimizationLevel: 5})
+		]))
+		.pipe(gulp.dest('./public/images/'));
 });
 
 gulp.task('watch', function () {
