@@ -587,19 +587,14 @@ a:active {
   max-width: 1920px;
   overflow: hidden;
   position: relative;
-  z-index: 0; }
-  .wrapper .bg--first-half {
-    background-image: url("../../images/space-bg-first-half-min.webp");
-    background-position: center top;
-    background-repeat-y: repeat;
-    background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain; }
-  .wrapper .bg--last-half {
-    background-image: url("../../images/space-bg-last-half-min.webp");
-    background-position: center bottom;
-    background-repeat-y: no-repeat; }
+  z-index: 0;
+  background-image: url("../../images/space-bg.webp");
+  background-position: center top;
+  background-repeat-y: repeat;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain; }
 
 .paragraph {
   font-size: 19px;
@@ -1128,19 +1123,22 @@ footer {
       height: 300px; }
     .sec--goodbye h2 {
       font-size: 48px; } }
-  .sec--contact .sector-title {
-    margin: 0 auto;
-    font-family: "cantarell-regular", sans-serif;
-    font-size: 70px;
-    font-weight: 400;
-    letter-spacing: 16px;
-    text-transform: uppercase;
-    margin-bottom: 50px; }
-  @media only screen and (max-width: 40rem) {
-    .sec--contact {
-      background-size: 80rem; }
-      .sec--contact .sector-title {
-        font-size: 35px; } }
+  .sec--contact {
+    background-image: url("../../images/future-brianville.webp");
+    background-position: center; }
+    .sec--contact .sector-title {
+      margin: 0 auto;
+      font-family: "cantarell-regular", sans-serif;
+      font-size: 70px;
+      font-weight: 400;
+      letter-spacing: 16px;
+      text-transform: uppercase;
+      margin-bottom: 50px; }
+    @media only screen and (max-width: 40rem) {
+      .sec--contact {
+        background-size: 80rem; }
+        .sec--contact .sector-title {
+          font-size: 35px; } }
 
 @keyframes offset-planet {
   0% {
