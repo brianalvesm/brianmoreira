@@ -588,7 +588,7 @@ a:active {
   overflow: hidden;
   position: relative;
   z-index: 0;
-  background-image: url("../../images/space-bg.webp");
+  background-image: url("../../images/background-min.webp");
   background-position: center top;
   background-repeat-y: repeat;
   background-size: contain;
