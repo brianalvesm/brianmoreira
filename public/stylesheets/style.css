@@ -595,6 +595,9 @@ a:active {
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain; }
+  @media only screen and (max-width: 40rem) {
+    .wrapper {
+      background-image: url("../../images/background-mobile.webp"); } }
 
 .paragraph {
   font-size: 19px;
