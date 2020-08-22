@@ -1125,7 +1125,7 @@ footer {
       font-size: 48px; } }
   .sec--contact {
     background-image: url("../../images/future-brianville.webp");
-    background-position: center; }
+    background-position: center bottom; }
     .sec--contact .sector-title {
       margin: 0 auto;
       font-family: "cantarell-regular", sans-serif;
