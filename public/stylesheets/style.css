@@ -1073,7 +1073,8 @@ footer {
     letter-spacing: 16px;
     text-transform: uppercase; }
   .sec--ideology .sector-topics {
-    font-family: "montserrat-semibold", sans-serif; }
+    font-family: "montserrat-semibold", sans-serif;
+    font-size: 22px; }
   @media only screen and (max-width: 40rem) {
     .sec--ideology .sector-title {
       font-size: 30px; }
