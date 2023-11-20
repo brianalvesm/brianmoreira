@@ -1,8 +1,188 @@
-// Stylesheets
+// Stylesheet
 
-@import "basic/responsive-embed"
-@import "basic/typography"
-@import "basic/variables-mixins"
-@import "layout/components"
-@import "layout/general"
-@import "layout/home"
+// TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap')
+
+$orange: #FF7235
+
+// General
+body, html
+	margin: 0
+	height: 100%
+	font-style: normal
+	font-variant: normal
+	font-weight: normal
+	font-family: 'Chewy', sans-serif
+	background-color: #0F1012
+	color: white
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	p
+		margin: 0
+
+html
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	font-size: 100%
+	line-height: 1.15
+	-webkit-text-size-adjust: 100%
+
+*
+	background-repeat: no-repeat
+	text-align: center
+	&:after,
+	&:before
+		background-repeat: no-repeat
+
+h1,h2,h3,h4,h5,h6
+	margin: 0 auto
+	font-weight: initial
+
+section
+	width: 100%
+	&:focus
+		outline: none
+
+ul
+	padding-left: 0
+	li
+		list-style: none
+
+a,
+a:link,
+a:active
+	color: inherit
+
+span
+	color: $orange
+
+.flex
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+
+.sec
+	&--hero
+		.flex
+			gap: 40px
+			height: 950px
+		.paragraph
+			max-width: 740px
+		@media only screen and (max-width: 40rem)
+			padding: 100px 0
+			.flex
+				height: initial
+			.paragraph
+				width: 100%
+	&--portfolio
+		background-color: #131417
+		border-top: 1px solid #2F2F2F
+		padding: 200px 0
+		.flex
+			gap: 200px
+		.content
+			gap: 20px
+		.portfolio-wrap
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-wrap: wrap
+			gap: 40px
+			img
+				object-fit: cover
+				width: 650px
+				height: 440px
+				// border: 1px solid #191919
+				border-radius: 12px
+				box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.25)
+				&.full-width
+					width: 1340px
+					height: 490px
+					@media only screen and (max-width: 60rem)
+						width: 100%
+						height: auto
+			.wip
+				display: block
+				position: relative
+				overflow: hidden
+				border-radius: 12px
+				box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.25)
+				&:before
+					display: block
+					content: "Wip"
+					text-transform: uppercase
+					font-size: 20px
+					text-align: center
+					padding: 10px 100px
+					background-color: $orange
+					position: absolute
+					z-index: 1
+					top: 20px
+					right: -75px 
+					transform: rotate(45deg)
+		@media only screen and (max-width: 60rem)
+			padding: 100px 0
+			.flex
+				gap: 100px
+			.content
+				gap: 20px
+			.portfolio-wrap
+				gap: 20px
+				img
+					width: 100%
+					height: auto
+	&--thatsall
+		// background-image: url('../images/space-bg.jpg')
+		// background-size: cover
+		background-color: #010101
+		height: 450px
+		position: relative
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			margin-top: calc(-515px / 2)
+			margin-left: calc(-600px / 2)
+		@media only screen and (max-width: 60rem)
+			height: auto
+			img
+				position: relative
+				top: 0
+				left: 0
+				margin-top: 0
+				margin-left: 0
+
+.title
+	font-size: 128px
+	color: $orange
+	text-shadow: 2px 4px 0 #800080
+	text-transform: uppercase
+	@media only screen and (max-width: 60rem)
+		font-size: 64px
+
+.paragraph
+	font-size: 25px
+
+@media only screen and (max-width: 40rem)
+	.cell
+		padding: 20px
+	.logo
+		width: 100%
+
+.social
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	gap: 10px
+	padding: 10px 15px
+	border-radius: 56px
+	border: 1px solid #2F2F2F
+	background-color: rgba(0, 0, 0, 0.6)
+
+footer
+	// border-top: 1px solid #2F2F2F
+	.cell
+		padding: 80px 0
+	.flex
+		gap: 20px
