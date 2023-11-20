@@ -4,8 +4,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap')
 
 $orange: #FF7235
+$yellow: #FFAF29
+$purple: #800080
+$granite-gray: #60626E
 
-// General
+$section-border: #20222D
+$bg-color1: #333646
+$bg-color2: #252734
+$bg-color3: #1E1F2A
+
+// MIXINS
+@mixin transition($time)
+  -webkit-transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
+  -moz-transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
+  -ms-transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
+  -o-transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
+  transition: all $time cubic-bezier(0.42, 0, 0.58, 1)
+
+@mixin rotate($degree)
+  -webkit-transform: rotate($degree)
+  -moz-transform: rotate($degree)
+  -ms-transform: rotate($degree)
+  -o-transform: rotate($degree)
+  transform: rotate($degree)
+
+// GENERAL
 body, html
 	margin: 0
 	height: 100%
@@ -13,8 +36,7 @@ body, html
 	font-variant: normal
 	font-weight: normal
 	font-family: 'Chewy', sans-serif
-	background-color: #0F1012
-	color: white
+	color: #EBEBEC
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	p
@@ -53,17 +75,58 @@ a:link,
 a:active
 	color: inherit
 
-span
-	color: $orange
+.highlight
+	color: $yellow
+
+.fade
+	color: $granite-gray
 
 .flex
 	display: flex
 	align-items: center
 	justify-content: center
-	flex-direction: column
+	&--h
+		flex-direction: row
+	&--v
+		flex-direction: column
 
+.title
+	font-size: 128px
+	color: $orange
+	text-shadow: 2px 4px 0 $purple
+	text-transform: uppercase
+	@media only screen and (max-width: 60rem)
+		font-size: 64px
+
+.paragraph
+	font-size: 26px
+	@media only screen and (max-width: 40rem)
+		font-size: 19px
+
+.social
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	gap: 10px
+	padding: 10px 15px
+	border-radius: 56px
+	background-color: rgba(0, 0, 0, 0.25)
+	a
+		@include transition(200ms)
+		&:hover
+			@include rotate(-45deg)
+			@include transition(200ms)
+
+@media only screen and (max-width: 40rem)
+	.cell
+		padding: 20px
+	.logo
+		width: 90%
+
+// SECTIONS
 .sec
 	&--hero
+		background-color: $bg-color3
 		.flex
 			gap: 40px
 			height: 950px
@@ -76,8 +139,9 @@ span
 			.paragraph
 				width: 100%
 	&--portfolio
-		background-color: #131417
-		border-top: 1px solid #2F2F2F
+		background-color: $bg-color2
+		border-top: 1px solid $section-border
+		border-bottom: 1px solid $section-border
 		padding: 200px 0
 		.flex
 			gap: 200px
@@ -132,59 +196,29 @@ span
 				img
 					width: 100%
 					height: auto
-	&--thatsall
-		// background-image: url('../images/space-bg.jpg')
-		// background-size: cover
-		background-color: #010101
-		height: 450px
-		position: relative
-		img
-			position: absolute
-			top: 50%
-			left: 50%
-			margin-top: calc(-515px / 2)
-			margin-left: calc(-600px / 2)
-		@media only screen and (max-width: 60rem)
-			height: auto
-			img
-				position: relative
-				top: 0
-				left: 0
-				margin-top: 0
-				margin-left: 0
-
-.title
-	font-size: 128px
-	color: $orange
-	text-shadow: 2px 4px 0 #800080
-	text-transform: uppercase
-	@media only screen and (max-width: 60rem)
-		font-size: 64px
-
-.paragraph
-	font-size: 25px
-	@media only screen and (max-width: 40rem)
-		font-size: 19px
-
-@media only screen and (max-width: 40rem)
-	.cell
-		padding: 20px
-	.logo
-		width: 100%
-
-.social
-	display: inline-flex
-	align-items: center
-	justify-content: center
-	gap: 10px
-	padding: 10px 15px
-	border-radius: 56px
-	border: 1px solid #2F2F2F
-	background-color: rgba(0, 0, 0, 0.6)
 
 footer
-	// border-top: 1px solid #2F2F2F
-	.cell
-		padding: 80px 0
-	.flex
-		gap: 20px
+	background-color: $bg-color3
+	position: relative
+	.footer-wrap
+		position: relative
+		top: -100px
+		gap: 60px
+	.footer-content-social-wrap
+		justify-content: space-between
+		border-top: 1px solid $granite-gray
+		padding-top: 15px
+		gap: 120px
+	.footer-text
+		align-items: baseline
+	small
+		font-size: 18px
+	@media only screen and (max-width: 40rem)
+		.footer-content-social-wrap
+			gap: 60px
+		.flex--h
+			flex-direction: column
+		.footer-wrap
+			top: -60px
+		.paragraph
+			font-size: 26px
