@@ -107,7 +107,7 @@ a:active {
     width: 90%; } }
 
 .sec--hero {
-  background-color: #1E1F2A; }
+  background-color: #15161E; }
   .sec--hero .flex {
     gap: 40px;
     height: 950px; }
@@ -182,7 +182,7 @@ a:active {
           height: auto; } }
 
 footer {
-  background-color: #1E1F2A;
+  background-color: #15161E;
   position: relative; }
   footer .footer-wrap {
     position: relative;
