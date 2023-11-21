@@ -222,7 +222,9 @@ a:active {
     .sec--about {
       padding: 100px 0; }
       .sec--about .content {
-        gap: 50px; } }
+        gap: 50px; }
+        .sec--about .content .paragraph {
+          padding: 0 16px; } }
 
 footer {
   background-color: #15161E;
