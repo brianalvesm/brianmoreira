@@ -119,6 +119,10 @@ a:active {
     .languages a.active {
       background-color: #252734; }
 
+.legenda {
+  display: block;
+  width: 100%; }
+
 @media only screen and (max-width: 40rem) {
   .cell {
     padding: 20px; }
