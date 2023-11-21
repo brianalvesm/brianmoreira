@@ -201,6 +201,12 @@ a:active {
           width: 100%;
           height: auto; } }
 
+.sec--about {
+  padding: 200px 0;
+  background-color: #0C7366; }
+  .sec--about .content {
+    gap: 100px; }
+
 footer {
   background-color: #15161E;
   position: relative; }
