@@ -173,6 +173,8 @@ a:active {
           .sec--portfolio .portfolio-wrap img.full-width {
             width: 100%;
             height: auto; } }
+      .sec--portfolio .portfolio-wrap img.full-height {
+        height: auto !important; }
     .sec--portfolio .portfolio-wrap .wip {
       display: block;
       position: relative;
