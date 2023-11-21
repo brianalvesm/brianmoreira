@@ -217,12 +217,12 @@ a:active {
   padding: 200px 0 300px;
   background-color: #0C7366; }
   .sec--about .content {
-    gap: 100px; }
+    gap: 50px; }
   @media only screen and (max-width: 40rem) {
     .sec--about {
       padding: 100px 0; }
       .sec--about .content {
-        gap: 50px; }
+        gap: 25px; }
         .sec--about .content .paragraph {
           padding: 0 16px; } }
 
