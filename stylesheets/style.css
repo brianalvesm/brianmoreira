@@ -206,7 +206,7 @@ a:active {
           height: auto; } }
 
 .sec--about {
-  padding: 200px 0;
+  padding: 200px 0 300px;
   background-color: #0C7366; }
   .sec--about .content {
     gap: 100px; }
