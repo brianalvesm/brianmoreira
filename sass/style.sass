@@ -116,6 +116,24 @@ a:active
 			@include rotate(-45deg)
 			@include transition(200ms)
 
+.language-wrap
+	gap: 10px
+	position: absolute
+	bottom: 40px
+	right: 40px
+	@media only screen and (max-width: 40rem)
+		position: relative
+		bottom: unset
+		right: unset
+
+.languages
+	gap: 2px
+	a
+		border-radius: 4px
+		padding: 6px
+		&.active
+			background-color: $bg-color2
+
 @media only screen and (max-width: 40rem)
 	.cell
 		padding: 20px
@@ -126,7 +144,8 @@ a:active
 .sec
 	&--hero
 		background-color: $bg-color1
-		.flex
+		position: relative
+		.hero-content
 			gap: 40px
 			height: 950px
 		.paragraph

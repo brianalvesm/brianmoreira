@@ -100,6 +100,25 @@ a:active {
       -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
       transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1); }
 
+.language-wrap {
+  gap: 10px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px; }
+  @media only screen and (max-width: 40rem) {
+    .language-wrap {
+      position: relative;
+      bottom: unset;
+      right: unset; } }
+
+.languages {
+  gap: 2px; }
+  .languages a {
+    border-radius: 4px;
+    padding: 6px; }
+    .languages a.active {
+      background-color: #252734; }
+
 @media only screen and (max-width: 40rem) {
   .cell {
     padding: 20px; }
@@ -107,8 +126,9 @@ a:active {
     width: 90%; } }
 
 .sec--hero {
-  background-color: #15161E; }
-  .sec--hero .flex {
+  background-color: #15161E;
+  position: relative; }
+  .sec--hero .hero-content {
     gap: 40px;
     height: 950px; }
   .sec--hero .paragraph {
