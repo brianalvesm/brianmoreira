@@ -73,5 +73,18 @@ $(document).ready(function(){
       $(this).removeClass('figcaption');
     });
 
+    $('.category-item').click(function() {
+      
+      $(this).addClass('active').siblings().removeClass('active');
+
+      var $filterNameTarget = ($(this).data('filter'))
+      var $filtered = $('[data-filter-target=' + $filterNameTarget + ']')
+      var $allTargets = $('[data-filter-target]')
+
+      $allTargets.removeClass('active');
+      $filtered.addClass('active');
+
+    });
+
 	})(jQuery);
 });
