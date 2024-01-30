@@ -2,6 +2,7 @@
 
 // TYPOGRAPHY
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap')
 
 $orange: #FF7235
 $yellow: #FFAF29
@@ -138,6 +139,62 @@ a:active
 	display: block
 	width: 100%
 
+$category-color-1: #5B4DFF
+$category-color-2: #FCC901
+$category-color-3: #21B634
+$category-color-4: #FF5226
+
+.categories
+	margin-top: 100px
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: center
+	gap: 60px
+	.category-item
+		display: flex
+		flex-direction: column
+		gap: 40px
+		opacity: 0.2
+		@include transition(200ms)
+		img
+			width: 200px
+			height: 200px
+			border-radius: 50%
+			border: 6px solid
+			@include transition(200ms)
+		.category-title
+			font-size: 32px
+			text-transform: uppercase
+		&:nth-child(1)
+			img
+				border-color: $category-color-1
+			.category-title
+				color: $category-color-1
+		&:nth-child(2)
+			img
+				border-color: $category-color-2
+			.category-title
+				color: $category-color-2
+		&:nth-child(3)
+			img
+				border-color: $category-color-3
+			.category-title
+				color: $category-color-3
+		&:nth-child(4)
+			img
+				border-color: $category-color-4
+			.category-title
+				color: $category-color-4
+				font-family: 'Press Start 2P', 'Chewy', sans-serif
+				font-size: 24px
+		&.active,
+		&:hover
+			cursor: pointer
+			opacity: 1
+			img
+				box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.2)
+
 @media only screen and (max-width: 40rem)
 	.cell
 		padding: 20px
@@ -170,11 +227,13 @@ a:active
 		.content
 			gap: 20px
 		.portfolio-wrap
-			display: flex
 			align-items: center
 			justify-content: center
 			flex-wrap: wrap
 			gap: 40px
+			display: none
+			&.active
+				display: flex
 			img
 				object-fit: cover
 				width: 580px
