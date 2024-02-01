@@ -118,7 +118,7 @@ a:active {
     border-radius: 4px;
     padding: 6px; }
     .languages a.active {
-      background-color: #252734; }
+      background-color: #1F202B; }
 
 .legenda {
   display: block;
@@ -201,7 +201,7 @@ a:active {
         width: 100%; } }
 
 .sec--portfolio {
-  background-color: #252734;
+  background-color: #1F202B;
   border-top: 1px solid #20222D;
   border-bottom: 1px solid #20222D;
   padding: 200px 0; }
