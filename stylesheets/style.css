@@ -185,6 +185,9 @@ a:active {
     width: 90%; } }
 
 .sec--hero {
+  background-image: url("../images/pattern-grain-1.jpg");
+  background-repeat: repeat;
+  background-size: auto;
   background-color: #15161E;
   position: relative; }
   .sec--hero .hero-content {
@@ -201,6 +204,9 @@ a:active {
         width: 100%; } }
 
 .sec--portfolio {
+  background-image: url("../images/pattern-grain-2.jpg");
+  background-repeat: repeat;
+  background-size: auto;
   background-color: #1F202B;
   border-top: 1px solid #20222D;
   border-bottom: 1px solid #20222D;
@@ -271,8 +277,11 @@ a:active {
           height: auto; } }
 
 .sec--about {
-  padding: 200px 0 300px;
-  background-color: #0C7366; }
+  background-image: url("../images/pattern-grain-3.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  background-color: #0C7366;
+  padding: 200px 0 300px; }
   .sec--about .content {
     gap: 50px; }
   @media only screen and (max-width: 40rem) {
@@ -284,6 +293,9 @@ a:active {
           padding: 0 16px; } }
 
 footer {
+  background-image: url("../images/pattern-grain-2.jpg");
+  background-repeat: repeat;
+  background-size: auto;
   background-color: #15161E;
   position: relative; }
   footer .footer-wrap {
