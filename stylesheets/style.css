@@ -89,6 +89,9 @@ a:active {
     -ms-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1); }
+    .social a img {
+      width: 36px;
+      height: 36px; }
     .social a:hover {
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
