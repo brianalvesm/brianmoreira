@@ -195,7 +195,7 @@ a:active {
   position: relative; }
   .sec--hero .hero-content {
     gap: 40px;
-    height: 950px; }
+    height: 920px; }
   .sec--hero .paragraph {
     max-width: 740px; }
   @media only screen and (max-width: 40rem) {
