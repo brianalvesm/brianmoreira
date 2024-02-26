@@ -109,6 +109,8 @@ a:active {
   position: absolute;
   bottom: 40px;
   right: 40px; }
+  .language-wrap img {
+    width: 25px; }
   @media only screen and (max-width: 40rem) {
     .language-wrap {
       position: relative;
