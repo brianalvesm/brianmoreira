@@ -183,6 +183,12 @@ a:active {
       .categories .category-item.active img, .categories .category-item:hover img {
         box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.2); }
 
+.htt-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px; }
+
 @media only screen and (max-width: 40rem) {
   .cell {
     padding: 20px; }
@@ -224,34 +230,38 @@ a:active {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 10px;
     display: none; }
     .sec--portfolio .portfolio-wrap.active {
       display: flex; }
     .sec--portfolio .portfolio-wrap img {
       object-fit: cover;
-      width: 580px;
-      height: 400px;
-      border-radius: 12px;
-      box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.25); }
+      border-radius: 6px;
+      width: 516px;
+      height: 356px; }
+      @media only screen and (min-width: 101rem) {
+        .sec--portfolio .portfolio-wrap img.grid-by-twos {
+          width: 779px;
+          height: 538px; } }
+      .sec--portfolio .portfolio-wrap img.horizontal-two-thirds {
+        width: 1042px;
+        height: 356px; }
+      .sec--portfolio .portfolio-wrap img.vertical-two-thirds {
+        width: 516px;
+        height: 721px; }
       .sec--portfolio .portfolio-wrap img.full-width {
-        width: 1200px;
-        height: 450px; }
-        @media only screen and (max-width: 60rem) {
-          .sec--portfolio .portfolio-wrap img.full-width {
-            width: 100%;
-            height: auto; } }
+        width: 100%; }
       .sec--portfolio .portfolio-wrap img.full-height {
         height: auto !important; }
-      @media only screen and (max-width: 40rem) {
+      @media only screen and (max-width: 68rem) {
         .sec--portfolio .portfolio-wrap img {
-          box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.25); } }
+          width: 100% !important;
+          height: auto !important; } }
     .sec--portfolio .portfolio-wrap .wip {
       display: block;
       position: relative;
       overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.25); }
+      border-radius: 6px; }
       .sec--portfolio .portfolio-wrap .wip:before {
         display: block;
         content: "Wip";
@@ -265,21 +275,16 @@ a:active {
         top: 20px;
         right: -75px;
         transform: rotate(45deg); }
-      @media only screen and (max-width: 40rem) {
+      @media only screen and (max-width: 68rem) {
         .sec--portfolio .portfolio-wrap .wip {
-          box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.25); } }
+          width: 100%; } }
   @media only screen and (max-width: 60rem) {
     .sec--portfolio {
       padding: 100px 0; }
       .sec--portfolio .flex {
         gap: 50px; }
       .sec--portfolio .content {
-        gap: 20px; }
-      .sec--portfolio .portfolio-wrap {
-        gap: 20px; }
-        .sec--portfolio .portfolio-wrap img {
-          width: 100%;
-          height: auto; } }
+        gap: 20px; } }
 
 .sec--about {
   background-image: url("../images/pattern-grain-3.jpg");
