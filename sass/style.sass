@@ -200,6 +200,12 @@ $category-color-4: #FF5226
 			img
 				box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.2)
 
+.htt-wrap
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	gap: 10px
+
 @media only screen and (max-width: 40rem)
 	.cell
 		padding: 20px
@@ -241,33 +247,41 @@ $category-color-4: #FF5226
 			align-items: center
 			justify-content: center
 			flex-wrap: wrap
-			gap: 40px
+			gap: 10px
 			display: none
 			&.active
 				display: flex
 			img
 				object-fit: cover
-				width: 580px
-				height: 400px
-				// border: 1px solid #191919
-				border-radius: 12px
-				box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.25)
+				border-radius: 6px
+				// Default: Grid by Threes
+				width: 516px
+				height: 356px
+				// Grid by twos só ativa acima de 1616px
+				@media only screen and (min-width: 101rem)
+					&.grid-by-twos
+						width: 779px
+						height: 538px
+				&.horizontal-two-thirds
+					width: 1042px
+					height: 356px
+				&.vertical-two-thirds
+					width: 516px
+					height: 721px
 				&.full-width
-					width: 1200px
-					height: 450px
-					@media only screen and (max-width: 60rem)
-						width: 100%
-						height: auto
+					width: 100%
 				&.full-height
 					height: auto !important
-				@media only screen and (max-width: 40rem)
-					box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.25)
+				// Abaixo de 1088px, totalmente 100%
+				@media only screen and (max-width: 68rem)
+					width: 100% !important
+					height: auto !important
+
 			.wip
 				display: block
 				position: relative
 				overflow: hidden
-				border-radius: 12px
-				box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0.25)
+				border-radius: 6px
 				&:before
 					display: block
 					content: "Wip"
@@ -281,19 +295,15 @@ $category-color-4: #FF5226
 					top: 20px
 					right: -75px 
 					transform: rotate(45deg)
-				@media only screen and (max-width: 40rem)
-					box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.25)
+				@media only screen and (max-width: 68rem)
+					width: 100%
 		@media only screen and (max-width: 60rem)
 			padding: 100px 0
 			.flex
 				gap: 50px
 			.content
 				gap: 20px
-			.portfolio-wrap
-				gap: 20px
-				img
-					width: 100%
-					height: auto
+
 	&--about
 		background-image: url('../images/pattern-grain-3.jpg')
 		background-repeat: repeat
