@@ -1,0 +1,148 @@
+// General
+body, html
+	margin: 0
+	height: 100%
+	font-style: normal
+	font-variant: normal
+	font-weight: normal
+	font-family: $montserrat
+	background-color: black
+	color: white
+	line-height: 1.5
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+html
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	font-size: 100%
+	line-height: 1.15
+	-webkit-text-size-adjust: 100%
+
+*
+	background-repeat: no-repeat
+	text-align: center
+	&:after,
+	&:before
+		background-repeat: no-repeat
+
+h1,h2,h3,h4,h5,h6
+	margin: 0 auto
+	font-weight: initial
+
+section
+	width: 100%
+	&:focus
+		outline: none
+
+ul
+	padding-left: 0
+	li
+		list-style: none
+
+b
+	font-family: $montserrat-semibold
+
+i
+	font-family: $montserrat-italic
+
+a,
+a:link,
+a:active
+	color: inherit
+
+// Helpers
+.left-to-center
+	text-align: left
+	@media only screen and (max-width: 40rem)
+		text-align: center
+
+.switch-mobile div
+	&:first-child
+		display: block
+	&:last-child
+		display: none
+	@media print, screen and (max-width: 40em)
+		&:first-child
+			display: none
+		&:last-child
+			display: block
+
+@media print, screen and (max-width: 39.99875em)
+  .hide-for-small-only
+    display: none
+
+.wrapper
+	margin: 0 auto
+	width: 100%
+	max-width: 1920px
+	overflow: hidden
+	position: relative
+	z-index: 0
+	background:
+		image: url('../../images/background-min.webp')
+		position: center top
+		repeat-y: repeat
+		size: contain
+	-webkit-background-size: contain
+	-moz-background-size: contain
+	-o-background-size: contain
+	@media only screen and (max-width: 40rem)
+		background-image: url('../../images/background-mobile.webp')
+
+.paragraph
+	font-size: 19px
+	font-weight: 300
+	@media only screen and (max-width: 40rem)
+		font-size: 16px
+
+form.form
+	text-align: center
+	position: relative
+	top: 65px
+	textarea,
+	input
+		text-align: left
+		max-width: 466px
+		border-radius: 4px
+		box-shadow: 0 3px 3px 0 rgba(0,0,0,0.25)
+		margin: 0 auto 1rem
+		position: relative
+	input
+		height: 50px
+		&[type="submit"]
+			@extend .subscribe
+			border: 0
+			margin-bottom: 0
+	.has-tooltip
+		display: block
+		max-width: 466px
+		margin: 0 auto
+	.tooltip-icon
+		position: absolute
+		right: 12px
+		top: calc(50% - 7px)
+		z-index: 1
+	.tooltip
+		bottom: 57px
+
+footer
+	background-color: #e94747
+	position: relative
+	.footer-content
+		position: absolute
+		top: -70px
+		left: 0
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 20px 0
+		img
+			margin: 0 5px
+	@media only screen and (max-width: 40rem)
+		.footer-content
+			flex-direction: column
+			top: -140px
+			img
+				margin: 10px
