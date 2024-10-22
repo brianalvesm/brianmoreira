@@ -2,6 +2,7 @@
 
 // TYPOGRAPHY
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap')
 
 // MIXINS
 @mixin transition($time)
@@ -28,15 +29,21 @@
 	&--v
 		flex-direction: column
 
+.chewy
+	font-family: 'Chewy', 'Poppins', sans-serif
+
+.poppins
+	font-family: 'Poppins', sans-serif
 
 // GENERAL
 body, html
 	margin: 0
 	height: 100%
+	font-size: 20px
 	font-style: normal
 	font-variant: normal
 	font-weight: normal
-	font-family: 'Chewy', sans-serif
+	font-family: 'Poppins', sans-serif
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	background-color: white
@@ -60,6 +67,7 @@ html
 h1,h2,h3,h4,h5,h6
 	margin: 0 auto
 	font-weight: initial
+	@extend .chewy
 
 section
 	width: 100%
@@ -94,16 +102,31 @@ header
 			display: flex
 			gap: 30px
 			font-size: 22px
+			@extend .chewy
+		@media only screen and (max-width: 75rem)
+			width: 100%
+			flex-direction: column
+			.logo
+				margin-bottom: 20px
 	.content
 		height: 328px
 	.title
 		font-size: 64px
 
 .sec
+	padding: 100px 0
 	&--portfolio
-		padding: 100px 0
 		.content
 			display: flex
 			flex-wrap: wrap
 			gap: 2px
 			justify-content: center
+
+.page-title
+	font-size: 48px
+
+.page-content
+	gap: 50px
+
+.social
+	gap: 5px
