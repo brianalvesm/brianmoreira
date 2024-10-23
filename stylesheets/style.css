@@ -9,7 +9,7 @@
   .flex--v {
     flex-direction: column; }
 
-.chewy, h1, h2, h3, h4, h5, h6, header .nav-wrap .nav {
+.chewy, h1, h2, h3, h4, h5, h6, header .nav {
   font-family: 'Chewy', 'Poppins', sans-serif; }
 
 .poppins {
@@ -63,39 +63,56 @@ a:active {
   text-decoration: none; }
 
 header {
-  height: 400px;
-  background-color: #F0E7C8; }
-  header .nav-wrap {
+  padding-top: 80px; }
+  header .logo img {
+    width: 200px; }
+  header .nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0; }
-    header .nav-wrap .logo img {
-      width: 156px; }
-    header .nav-wrap .nav {
-      display: flex;
-      gap: 30px;
-      font-size: 22px; }
-    @media only screen and (max-width: 75rem) {
-      header .nav-wrap {
-        width: 100%;
-        flex-direction: column; }
-        header .nav-wrap .logo {
-          margin-bottom: 20px; } }
+    gap: 30px;
+    font-size: 22px;
+    border-bottom: 1px solid #FF778F;
+    border-top: 1px solid #FF778F;
+    padding: 10px; }
+    header .nav .active {
+      color: #FF778F; }
   header .content {
-    height: 328px; }
-  header .title {
-    font-size: 64px; }
+    gap: 20px; }
 
 .sec {
-  padding: 100px 0; }
-  .sec--portfolio .content {
+  padding: 80px 0; }
+  .sec--showcase .content {
     display: flex;
     flex-wrap: wrap;
     gap: 2px;
     justify-content: center; }
+    .sec--showcase .content img:hover {
+      cursor: pointer; }
+  .sec--portfolio .content {
+    width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+    display: flex;
+    gap: 60px;
+    flex-direction: column; }
+    .sec--portfolio .content p, .sec--portfolio .content h2 {
+      text-align: left; }
+    .sec--portfolio .content .extras-h {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 100px;
+      justify-content: space-between; }
+    .sec--portfolio .content .extras-v {
+      display: flex;
+      gap: 40px;
+      flex-direction: column;
+      justify-content: space-between; }
+    @media only screen and (max-width: 75rem) {
+      .sec--portfolio .content {
+        width: 100%; }
+        .sec--portfolio .content .extras-h {
+          flex-direction: column;
+          gap: 40px; } }
 
 .page-title {
   font-size: 48px; }
@@ -105,3 +122,22 @@ header {
 
 .social {
   gap: 5px; }
+
+footer .content {
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 30px; }
+  footer .content img {
+    width: 156px; }
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px; }
+  .close-button span {
+    font-size: 40px;
+    color: white; }
+
+.reveal {
+  padding: 0 !important; }

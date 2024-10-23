@@ -26,18 +26,18 @@
 		<meta http-equiv="Content-Language" content="en">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Brian Moreira">
-		<meta name="description" content="Beautiful 2D Illustrations for children's books, games and animation, using traditional and digital painting techniques.">
+		<meta name="description" content="Beautiful illustrations for children's books and 2D animations, using traditional and digital painting techniques.">
 		<meta name="keywords" content="Illustrations, Freelance illustrator, Children's books, Animation backgrounds, Painting, Watercolor, 2D Artist">
 
 		<meta property="og:site_name" content="Brian Moreira">
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://brianmoreira.com/" />
 		<meta property="og:title" content="Brian Moreira | Freelance Illustrator" />
-		<meta property="og:description" content="Beautiful 2D Illustrations for children's books, games and animation, using traditional and digital painting techniques" />
+		<meta property="og:description" content="Beautiful illustrations for children's books and 2D animations, using traditional and digital painting techniques" />
 		<meta property="og:image" content="https://brianmoreira.com/images/brianmoreira-cover.jpg" />
 
 		<meta name="twitter:title" content="Brian Moreira | Freelance Illustrator" />
-		<meta name="twitter:description" content="Beautiful 2D Illustrations for children's books, games and animation, using traditional and digital painting techniques" />
+		<meta name="twitter:description" content="Beautiful illustrations for children's books and 2D animations, using traditional and digital painting techniques" />
 		<meta name="twitter:image" content="https://brianmoreira.com/images/brianmoreira-cover.jpg" />
 		<meta name="twitter:card" content="summary_large_image">
 
@@ -57,43 +57,126 @@
 				<div class="grid-container">
 					<div class="grid-x grid-padding-x">
 						<div class="cell">
-							<div class="nav-wrap">
+							<div class="content flex flex--v">
 								<a href="/" class="logo"><img src="images/logo.png" alt="Brian Moreira Logo"></a>
+								<!-- <h1 class="title">Freelance Illustrator</h1> -->
 								<nav class="nav">
-									<a href="/">Portfolio</a>
+									<a href="/" class="active">Portfolio</a>
 									<a href="/about/">About</a>
 									<a href="/contact/">Contact</a>
 								</nav>
-							</div>
-							<div class="content flex">
-								<h1 class="title">Freelance Illustrator</h1>
 							</div>
 						</div>
 					</div>
 				</div>
 			</header>
-			<section class="sec sec--portfolio">
+			<section class="sec sec--showcase">
 				<div class="grid-container">
 					<div class="grid-x grid-padding-x">
 						<div class="cell">
 							<div class="content">
-								<a href=""><img src="images/portfolio/covers/fantasy-autumn.jpg" alt="Art of Brian Moreira"></a>
-								<a href=""><img src="images/portfolio/covers/horrifikland.jpg" alt="Art of Brian Moreira"></a>
-								<a href=""><img src="images/portfolio/covers/snowman.jpg" alt="Art of Brian Moreira"></a>
-								<a href=""><img src="images/portfolio/covers/future-me.jpg" alt="Art of Brian Moreira"></a>
-								<a href=""><img src="images/portfolio/covers/oddi.jpg" alt="Art of Brian Moreira"></a>
-								<a href=""><img src="images/portfolio/covers/mouse-winter.jpg" alt="Art of Brian Moreira"></a>
-								<a href=""><img src="images/portfolio/covers/mickeys-fire-brigade.jpg" alt="Art of Brian Moreira"></a>
-								<a href=""><img src="images/portfolio/covers/tavern-entrance.jpg" alt="Art of Brian Moreira"></a>
-								<a href=""><img src="images/portfolio/covers/whats-opera-doc.jpg" alt="Art of Brian Moreira"></a>
-								<a href=""><img src="images/portfolio/covers/charmander.jpg" alt="Art of Brian Moreira"></a>
-								<a href=""><img src="images/portfolio/covers/squirtle.jpg" alt="Art of Brian Moreira"></a>
-								<a href=""><img src="images/portfolio/covers/pikachu.jpg" alt="Art of Brian Moreira"></a>
+								<img data-open="fantasy-autumn" src="images/portfolio/covers/fantasy-autumn.jpg" alt="Art of Brian Moreira">
+								<img data-open="horrifikland" src="images/portfolio/covers/horrifikland.jpg" alt="Art of Brian Moreira">
+								<img data-open="snowman" src="images/portfolio/covers/snowman.jpg" alt="Art of Brian Moreira">
+								<img data-open="future-me" src="images/portfolio/covers/future-me.jpg" alt="Art of Brian Moreira">
+								<img data-open="oddi" src="images/portfolio/covers/oddi.jpg" alt="Art of Brian Moreira">
+								<img data-open="mouse-winter" src="images/portfolio/covers/mouse-winter.jpg" alt="Art of Brian Moreira">
+								<img data-open="mickeys-fire-brigade" src="images/portfolio/covers/mickeys-fire-brigade.jpg" alt="Art of Brian Moreira">
+								<img data-open="tavern-entrance" src="images/portfolio/covers/tavern-entrance.jpg" alt="Art of Brian Moreira">
+								<img data-open="whats-opera-doc" src="images/portfolio/covers/whats-opera-doc.jpg" alt="Art of Brian Moreira">
+								<img data-open="charmander" src="images/portfolio/covers/charmander.jpg" alt="Art of Brian Moreira">
+								<img data-open="squirtle" src="images/portfolio/covers/squirtle.jpg" alt="Art of Brian Moreira">
+								<img data-open="pikachu" src="images/portfolio/covers/pikachu.jpg" alt="Art of Brian Moreira">
 							</div>
+
+							<div class="large reveal" id="fantasy-autumn" data-reveal>
+							  <img src="images/portfolio/fantasy-autumn.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="large reveal" id="horrifikland" data-reveal>
+							  <img src="images/portfolio/horrifikland.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="reveal" id="snowman" data-reveal>
+							  <img src="images/portfolio/snowman.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="reveal" id="future-me" data-reveal>
+							  <img src="images/portfolio/future-me.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="large reveal" id="oddi" data-reveal>
+							  <img src="images/portfolio/oddi.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="large reveal" id="mouse-winter" data-reveal>
+							  <img src="images/portfolio/mouse-winter.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="large reveal" id="mickeys-fire-brigade" data-reveal>
+							  <img src="images/portfolio/mickeys-fire-brigade.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="large reveal" id="tavern-entrance" data-reveal>
+							  <img src="images/portfolio/tavern-entrance.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="large reveal" id="whats-opera-doc" data-reveal>
+							  <img src="images/portfolio/whats-opera-doc.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="large reveal" id="charmander" data-reveal>
+							  <img src="images/portfolio/charmander.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="large reveal" id="squirtle" data-reveal>
+							  <img src="images/portfolio/squirtle.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="large reveal" id="pikachu" data-reveal>
+							  <img src="images/portfolio/pikachu.jpg" alt="Art of Brian Moreira">
+							  <button class="close-button" data-close aria-label="Close modal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+
 						</div>
 					</div>
 				</div>
 			</section>
+			<footer>
+				<div class="grid-container">
+					<div class="grid-x grid-padding-x">
+						<div class="cell">
+							<div class="content flex">
+								<h5>Brian Moreira © 2024</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</main>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
