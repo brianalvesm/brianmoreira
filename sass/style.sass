@@ -26,7 +26,6 @@ $primary-color: #FF778F
 	display: flex
 	align-items: center
 	justify-content: center
-	flex-wrap: wrap
 	&--h
 		flex-direction: row
 	&--v
@@ -126,6 +125,10 @@ header
 			flex-direction: column
 			p, h2
 				text-align: left
+			.bts
+				overflow: hidden
+				img
+					width: 33%
 			.extras-h
 				display: flex
 				flex-direction: row
@@ -139,6 +142,8 @@ header
 				flex-direction: column
 				justify-content: space-between
 				height: 100%
+				img
+					width: fit-content
 			@media only screen and (max-width: 75rem)
 				width: 100%
 				.extras-h

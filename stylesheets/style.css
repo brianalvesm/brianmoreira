@@ -3,8 +3,7 @@
 .flex {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap; }
+  justify-content: center; }
   .flex--h {
     flex-direction: row; }
   .flex--v {
@@ -97,6 +96,10 @@ header {
     flex-direction: column; }
     .sec--portfolio .content p, .sec--portfolio .content h2 {
       text-align: left; }
+    .sec--portfolio .content .bts {
+      overflow: hidden; }
+      .sec--portfolio .content .bts img {
+        width: 33%; }
     .sec--portfolio .content .extras-h {
       display: flex;
       flex-direction: row;
@@ -110,6 +113,8 @@ header {
       flex-direction: column;
       justify-content: space-between;
       height: 100%; }
+      .sec--portfolio .content .extras-v img {
+        width: fit-content; }
     @media only screen and (max-width: 75rem) {
       .sec--portfolio .content {
         width: 100%; }
