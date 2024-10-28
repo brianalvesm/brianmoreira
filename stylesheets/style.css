@@ -123,13 +123,15 @@ header {
   @media only screen and (max-width: 75rem) {
     .sec {
       padding: 40px 0; }
-      .sec .content {
+      .sec--showcase .content {
+        width: 100%; }
+      .sec--portfolio .content {
         width: 100%;
         gap: 20px; }
-        .sec .content .extras-h {
+        .sec--portfolio .content .extras-h {
           flex-direction: column;
           gap: 20px; }
-        .sec .content .extras-v {
+        .sec--portfolio .content .extras-v {
           gap: 20px; } }
 
 .artworks-wrap {
@@ -141,7 +143,7 @@ header {
   display: flex;
   overflow: hidden;
   justify-content: space-between; }
-  @media only screen and (max-width: 40rem) {
+  @media only screen and (max-width: 75rem) {
     .behind-the-scenes {
       overflow: scroll; } }
 
