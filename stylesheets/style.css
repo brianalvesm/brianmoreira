@@ -86,6 +86,26 @@ header {
       padding-top: 40px; }
       header .nav {
         width: 100%; } }
+  header.christmas .logo img {
+    width: 253px; }
+  header.christmas .nav {
+    position: relative; }
+    header.christmas .nav:before, header.christmas .nav:after {
+      content: "";
+      background-image: url("../images/christmas/ornamento-lateral.png");
+      display: block;
+      width: 26px;
+      height: 56px;
+      position: absolute;
+      top: -7px; }
+    header.christmas .nav:before {
+      left: -40px; }
+    header.christmas .nav:after {
+      right: -40px;
+      transform: scaleX(-1); }
+    @media only screen and (max-width: 40rem) {
+      header.christmas .nav:before, header.christmas .nav:after {
+        content: none; } }
 
 .sec {
   padding: 60px 0; }
