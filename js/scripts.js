@@ -86,7 +86,7 @@ $(document).ready(function(){
 
     });
 
-    if ($(".page-about")[0]) {
+    if $('body').hasClass('page-about') {
       $(this).find('.nav-about').addClass('active');
     };
 
