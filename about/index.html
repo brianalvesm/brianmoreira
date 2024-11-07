@@ -20,6 +20,13 @@
 
 		  gtag('config', 'UA-174548657-1');
 		</script>
+		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+		<script> 
+			$(function(){
+			  $("#header").load("header.html"); 
+			  $("#footer").load("footer.html"); 
+			});
+		</script>
 
 		<title>About | Brian Moreira</title>
 		<meta charset="UTF-8">
@@ -53,24 +60,7 @@
 	</head>
 	<body>
 		<main class="wrapper">
-			<header class="christmas">
-				<div class="grid-container">
-					<div class="grid-x grid-padding-x">
-						<div class="cell">
-							<div class="content flex flex--v">
-								<a href="../" class="logo"><img src="../images/logo-christmas.png" alt="Brian Moreira Logo"></a>
-								<!-- <h1 class="title">Freelance Illustrator</h1> -->
-								<nav class="nav">
-									<a href="../">Illustrations</a>
-									<a href="../about/" class="active">About</a>
-									<a href="../contact/">Contact</a>
-								</nav>
-								<img src="../images/christmas/pisca-pisca.png" alt="pisca-pisca">
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
+			<div id="header"></div>
 			<section class="sec">
 				<div class="grid-container">
 					<div class="grid-x grid-padding-x">
@@ -87,17 +77,7 @@
 					</div>
 				</div>
 			</section>
-			<footer>
-				<div class="grid-container">
-					<div class="grid-x grid-padding-x">
-						<div class="cell">
-							<div class="content flex">
-								<h5>Brian Moreira © 2024</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
+			<div id="footer"></div>
 		</main>
 		<script type="text/javascript" src="../js/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/scripts.js"></script>
