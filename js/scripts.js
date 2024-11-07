@@ -86,8 +86,8 @@ $(document).ready(function(){
 
     });
 
-    $('.page-about').function() {
-      $(this).find('.nav-about').addClass('active');
+    if ($(".page-about")[0]) {
+      $('.nav-about').addClass('active');
     };
 
 	})(jQuery);
