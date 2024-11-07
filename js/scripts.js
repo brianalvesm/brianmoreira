@@ -86,5 +86,9 @@ $(document).ready(function(){
 
     });
 
+    $('.page-about').function() {
+      $(this).find('.nav-about').addClass('active');
+    };
+
 	})(jQuery);
 });
