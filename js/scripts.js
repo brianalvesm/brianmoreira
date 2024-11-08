@@ -4,11 +4,11 @@ $(document).ready(function(){
 		$(document).foundation();
 
     if ($("body").hasClass("page-about")) {
-      $('[data-page=' + "about" + ']').addClass('active');
+      $('.nav-about').addClass('active');
     };
 
     if ($("body").hasClass("page-contact")) {
-      $('[data-page=' + "contact" + ']').addClass('active');
+      $('.nav-contact').addClass('active');
     };
 
 	})(jQuery);
