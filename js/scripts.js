@@ -6,8 +6,6 @@ $(document).ready(function(){
 
 		$(document).foundation();
 
-    console.log( "ready!" );
-
     if ($("body").hasClass("page-illustration")) {
       $('.nav-illustration').addClass('active');
     };
