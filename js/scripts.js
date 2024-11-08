@@ -28,7 +28,7 @@ $(document).ready(function(){
       console.log("Second Function end");
     };
 
-    $activeNav();
+    activeNav();
 
 	})(jQuery);
 });
