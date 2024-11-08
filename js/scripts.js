@@ -28,8 +28,7 @@ $(document).ready(function(){
 
     loadPartials();
 
-    setTimeout(activeNav, 500);
-
+    setTimeout(activeNav, 100);
 
 	})(jQuery);
 });
