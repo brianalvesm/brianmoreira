@@ -9,7 +9,7 @@
   .flex--v {
     flex-direction: column; }
 
-.chewy, h1, h2, h3, h4, h5, h6, header .nav {
+.chewy, h1, h2, h3, h4, h5, h6, header .nav, a.link {
   font-family: 'Chewy', 'Poppins', sans-serif; }
 
 .poppins {
@@ -210,6 +210,29 @@ header {
 
 .social {
   gap: 5px; }
+
+.news-headline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  margin-bottom: 40px; }
+  .news-headline .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 484px; }
+  .news-headline .title {
+    font-size: 36px; }
+  .news-headline p {
+    text-align: left; }
+
+a.link {
+  color: #FF778F;
+  text-decoration: underline;
+  font-size: 20px; }
 
 footer .content {
   gap: 10px;

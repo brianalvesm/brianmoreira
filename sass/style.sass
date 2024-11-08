@@ -242,6 +242,30 @@ header
 .social
 	gap: 5px
 
+.news-headline
+	display: flex
+	flex-wrap: wrap
+	gap: 60px
+	justify-content: center
+	margin-bottom: 40px
+	.content
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-start
+		gap: 20px
+		max-width: 484px
+	.title
+		font-size: 36px
+	p
+		text-align: left
+
+a.link
+	@extend .chewy
+	color: $primary-color
+	text-decoration: underline
+	font-size: 20px
+
 // FOOTER
 footer .content
 	gap: 10px
