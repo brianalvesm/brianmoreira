@@ -4,16 +4,13 @@ $(document).ready(function(){
 		$(document).foundation();
 
     function loadPartials() {
-      console.log("First Function start");
 
       $("#header").load("../header.html");
       $("#footer").load("../footer.html");
 
-      console.log("First Function end");
     };
 
     function activeNav() {
-      console.log("Second Function start");
 
       if ($("body").hasClass("page-illustration")) {
         $('.nav-illustration').addClass('active');
@@ -27,12 +24,11 @@ $(document).ready(function(){
         $('.nav-contact').addClass('active');
       };
 
-      console.log("Second Function end");
     };
 
     loadPartials();
 
-    setTimeout(activeNav, 1000);
+    setTimeout(activeNav, 500);
 
 
 	})(jQuery);
