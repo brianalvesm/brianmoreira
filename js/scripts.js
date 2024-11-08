@@ -10,25 +10,7 @@ $(document).ready(function(){
 
     };
 
-    function activeNav() {
-
-      if ($("body").hasClass("page-illustration")) {
-        $('.nav-illustration').addClass('active');
-      };
-
-      if ($("body").hasClass("page-about")) {
-        $('.nav-about').addClass('active');
-      };
-
-      if ($("body").hasClass("page-contact")) {
-        $('.nav-contact').addClass('active');
-      };
-
-    };
-
     loadPartials();
-
-    setTimeout(activeNav, 100);
 
 	})(jQuery);
 });
