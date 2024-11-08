@@ -3,12 +3,14 @@ $(document).ready(function(){
 
 		$(document).foundation();
 
-    console.log("First Function start");
+    function loadPartials() {
+      console.log("First Function start");
 
-    $("#header").load("../header.html");
-    $("#footer").load("../footer.html");
+      $("#header").load("../header.html");
+      $("#footer").load("../footer.html");
 
-    console.log("First Function end");
+      console.log("First Function end");
+    };
 
     function activeNav() {
       console.log("Second Function start");
@@ -28,7 +30,10 @@ $(document).ready(function(){
       console.log("Second Function end");
     };
 
-    activeNav();
+    loadPartials();
+
+    setTimeout(activeNav, 1000);
+
 
 	})(jQuery);
 });
