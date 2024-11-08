@@ -3,11 +3,11 @@ $(document).ready(function(){
 
 		$(document).foundation();
 
-    if ($("body").hasClass("page-" + "about")) {
+    if ($("body").hasClass("page-about")) {
       $('[data-page=' + "about" + ']').addClass('active');
     };
 
-    if ($("body").hasClass("page-" + "contact")) {
+    if ($("body").hasClass("page-contact")) {
       $('[data-page=' + "contact" + ']').addClass('active');
     };
 
