@@ -214,7 +214,7 @@ header {
 .news-headline {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 20px;
   justify-content: center;
   margin-bottom: 40px; }
   .news-headline .content {
@@ -228,13 +228,13 @@ header {
     font-size: 36px; }
   .news-headline p {
     text-align: left; }
+  .news-headline img {
+    max-width: 243px; }
   @media only screen and (max-width: 40rem) {
-    .news-headline {
-      gap: 20px; }
-      .news-headline .content {
-        align-items: center; }
-      .news-headline p {
-        text-align: center; } }
+    .news-headline .content {
+      align-items: center; }
+    .news-headline p {
+      text-align: center; } }
 
 a.link {
   color: #FF778F;
