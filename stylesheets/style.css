@@ -83,9 +83,7 @@ header {
     gap: 10px; }
   @media only screen and (max-width: 40rem) {
     header {
-      padding-top: 40px; }
-      header .nav {
-        width: 100%; } }
+      padding-top: 40px; } }
   header.christmas .logo img {
     width: 253px; }
   header.christmas .nav {
@@ -259,3 +257,23 @@ footer .content {
 
 .reveal {
   padding: 0 !important; }
+
+.about-topics {
+  padding: 20px;
+  background-color: #F9FAFA;
+  border: 1px solid #EFF3F6;
+  border-radius: 16px; }
+  .about-topics div {
+    max-width: 500px;
+    margin-left: 40px; }
+    .about-topics div * {
+      text-align: left; }
+    .about-topics div p {
+      font-size: 16px; }
+  @media only screen and (max-width: 40rem) {
+    .about-topics {
+      flex-direction: column; }
+      .about-topics div {
+        margin: 20px 0; }
+        .about-topics div * {
+          text-align: center; } }
