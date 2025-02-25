@@ -88,8 +88,17 @@ a:link,
 a:active
 	color: inherit
 	text-decoration: none
-	&.link
-		color: cornflowerblue
+
+a.link
+	color: cornflowerblue
+	text-decoration: none
+	font-size: inherit
+
+a.cta
+	@extend .chewy
+	color: $primary-color
+	text-decoration: none
+	font-size: 20px
 
 figcaption
 	color: #555
@@ -281,12 +290,6 @@ header
 			align-items: center
 		p
 			text-align: center
-
-a.link
-	@extend .chewy
-	color: $primary-color
-	text-decoration: underline
-	font-size: 20px
 
 // FOOTER
 footer .content
