@@ -120,6 +120,11 @@ header {
       header.christmas .nav:before, header.christmas .nav:after {
         content: none; } }
 
+.kofi {
+  position: absolute;
+  right: 40px;
+  top: 40px; }
+
 .sec {
   padding: 60px 0; }
   .sec--showcase .content {
