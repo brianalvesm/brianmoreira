@@ -316,12 +316,18 @@ footer .content {
     display: none;
     visibility: hidden; }
   .pog:hover {
+    cursor: pointer;
+    transition: transform 0.4s;
+    transform: rotateY(20deg); }
+  .pog.flip {
     transform: rotateY(180deg); }
-    .pog:hover .back {
+    .pog.flip .back {
       display: block;
       visibility: visible;
       animation-name: fade;
-      animation-duration: 0.8s; }
+      animation-duration: 0.4s; }
+      .pog.flip .back:hover {
+        cursor: pointer; }
 
 @keyframes fade {
   0% {

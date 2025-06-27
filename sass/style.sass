@@ -361,12 +361,18 @@ footer .content
 		display: none
 		visibility: hidden
 	&:hover
+		cursor: pointer
+		transition: transform 0.4s
+		transform: rotateY(20deg)
+	&.flip
 		transform: rotateY(180deg)
 		.back
 			display: block
 			visibility: visible
 			animation-name: fade
-			animation-duration: 0.8s
+			animation-duration: 0.4s
+			&:hover
+				cursor: pointer
 
 @keyframes fade
 	0%
