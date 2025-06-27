@@ -292,3 +292,39 @@ footer .content {
         margin: 20px 0; }
         .about-topics div * {
           text-align: center; } }
+
+.pog-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center; }
+
+.pog {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  background: transparent; }
+  .pog .front,
+  .pog .back {
+    position: absolute;
+    left: 0; }
+  .pog .back {
+    display: none;
+    visibility: hidden; }
+  .pog:hover {
+    transform: rotateY(180deg); }
+    .pog:hover .back {
+      display: block;
+      visibility: visible;
+      animation-name: fade;
+      animation-duration: 0.8s; }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

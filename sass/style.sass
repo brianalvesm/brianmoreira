@@ -336,3 +336,40 @@ footer .content
 			margin: 20px 0
 			*
 				text-align: center
+
+// POGS
+.pog-wrap
+	display: flex
+	flex-direction: column
+	gap: 30px
+	align-items: center
+
+.pog
+	position: relative
+	display: block
+	width: 300px
+	height: 300px
+	border-radius: 150px
+	transition: transform 0.8s
+	transform-style: preserve-3d
+	background: transparent
+	.front,
+	.back
+		position: absolute
+		left: 0
+	.back
+		display: none
+		visibility: hidden
+	&:hover
+		transform: rotateY(180deg)
+		.back
+			display: block
+			visibility: visible
+			animation-name: fade
+			animation-duration: 0.8s
+
+@keyframes fade
+	0%
+		opacity: 0
+	100%
+		opacity: 1
