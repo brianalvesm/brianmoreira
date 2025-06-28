@@ -299,6 +299,12 @@ footer .content {
   gap: 30px;
   align-items: center; }
 
+.pog .front, .pog .back, .pog:hover, .pog.flip .front, .pog.flip .back {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s; }
+
 .pog {
   position: relative;
   display: block;
@@ -312,25 +318,22 @@ footer .content {
   .pog .back {
     position: absolute;
     left: 0; }
+  .pog .front {
+    opacity: 1;
+    visibility: visible; }
   .pog .back {
-    display: none;
+    opacity: 0;
     visibility: hidden; }
   .pog:hover {
     cursor: pointer;
-    transition: transform 0.4s;
     transform: rotateY(20deg); }
   .pog.flip {
     transform: rotateY(180deg); }
+    .pog.flip .front {
+      opacity: 0;
+      visibility: hidden; }
     .pog.flip .back {
-      display: block;
-      visibility: visible;
-      animation-name: fade;
-      animation-duration: 0.4s; }
+      opacity: 1;
+      visibility: visible; }
       .pog.flip .back:hover {
         cursor: pointer; }
-
-@keyframes fade {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }

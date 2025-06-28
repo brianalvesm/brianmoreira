@@ -344,6 +344,12 @@ footer .content
 	gap: 30px
 	align-items: center
 
+%transition
+	-webkit-transition: 0.4s
+	-moz-transition: 0.4s
+	-o-transition: 0.4s
+	transition: 0.4s
+
 .pog
 	position: relative
 	display: block
@@ -357,25 +363,27 @@ footer .content
 	.back
 		position: absolute
 		left: 0
+	.front
+		opacity: 1
+		visibility: visible
+		@extend %transition
 	.back
-		display: none
+		opacity: 0
 		visibility: hidden
+		@extend %transition
 	&:hover
 		cursor: pointer
-		transition: transform 0.4s
+		@extend %transition
 		transform: rotateY(20deg)
 	&.flip
 		transform: rotateY(180deg)
+		.front
+			opacity: 0
+			visibility: hidden
+			@extend %transition
 		.back
-			display: block
+			opacity: 1
 			visibility: visible
-			animation-name: fade
-			animation-duration: 0.4s
+			@extend %transition
 			&:hover
 				cursor: pointer
-
-@keyframes fade
-	0%
-		opacity: 0
-	100%
-		opacity: 1
