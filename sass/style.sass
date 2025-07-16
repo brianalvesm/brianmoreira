@@ -125,6 +125,12 @@ header
 		gap: 10px
 	@media only screen and (max-width: 40rem)
 		padding-top: 40px
+		.nav
+			width: 100%
+			justify-content: flex-start
+			overflow-x: scroll
+			gap: 26px
+			font-size: 20px
 	// CHRISTMAS DECORATIONS
 	&.christmas
 		.logo
@@ -154,11 +160,14 @@ header
 .page-illustration
 	.nav a:nth-child(1)
 		@extend .active
-.page-about
+.page-animation
 	.nav a:nth-child(2)
 		@extend .active
-.page-contact
+.page-about
 	.nav a:nth-child(3)
+		@extend .active
+.page-contact
+	.nav a:nth-child(4)
 		@extend .active
 
 .kofi
@@ -178,6 +187,12 @@ header
 			justify-content: center
 			img:hover
 				cursor: pointer
+		&.animations
+			.content img
+				width: 598px
+				border-radius: 12px
+				&:hover
+					cursor: unset
 	&--portfolio // Páginas internas
 		.content
 			width: 1200px
@@ -277,7 +292,7 @@ header
 	flex-wrap: wrap
 	gap: 20px
 	justify-content: center
-	margin-bottom: 40px
+	margin-bottom: 20px
 	.content
 		display: flex
 		flex-direction: column
@@ -303,6 +318,9 @@ footer .content
 	max-width: 1200px
 	margin: 0 auto
 	padding-bottom: 30px
+	display: flex
+	flex-direction: column
+	gap: 20px
 	img
 		width: 156px
 
