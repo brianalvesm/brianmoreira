@@ -181,12 +181,18 @@ header
 	padding: 60px 0
 	&--showcase // Página Inicial
 		.content
+			width: 1606px
 			display: flex
 			flex-wrap: wrap
 			gap: 2px
 			justify-content: center
 			img:hover
 				cursor: pointer
+			@media only screen and (max-width: 1606px)
+				width: 100%
+			@media only screen and (min-width: 1249px) and (max-width: 1606px)
+				a:nth-child(4)
+					display: none
 		&.animations
 			.content img
 				width: 598px

@@ -135,12 +135,19 @@ header {
 .sec {
   padding: 60px 0; }
   .sec--showcase .content {
+    width: 1606px;
     display: flex;
     flex-wrap: wrap;
     gap: 2px;
     justify-content: center; }
     .sec--showcase .content img:hover {
       cursor: pointer; }
+    @media only screen and (max-width: 1606px) {
+      .sec--showcase .content {
+        width: 100%; } }
+    @media only screen and (min-width: 1249px) and (max-width: 1606px) {
+      .sec--showcase .content a:nth-child(4) {
+        display: none; } }
   .sec--showcase.animations .content img {
     width: 598px;
     border-radius: 12px; }
