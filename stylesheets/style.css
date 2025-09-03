@@ -132,22 +132,24 @@ header {
     right: 40px;
     top: 40px; } }
 
+.owl-carousel {
+  max-width: 1204px;
+  margin: 0 auto 40px; }
+
 .sec {
-  padding: 60px 0; }
+  padding: 50px 0; }
   .sec--showcase .content {
-    width: 1606px;
     display: flex;
     flex-wrap: wrap;
     gap: 2px;
     justify-content: center; }
     .sec--showcase .content img:hover {
       cursor: pointer; }
-    @media only screen and (max-width: 1606px) {
-      .sec--showcase .content {
-        width: 100%; } }
-    @media only screen and (min-width: 1249px) and (max-width: 1606px) {
-      .sec--showcase .content a:nth-child(4) {
-        display: none; } }
+    .sec--showcase .content.vert {
+      margin-bottom: 2px; }
+      @media only screen and (min-width: 847px) and (max-width: 1248px) {
+        .sec--showcase .content.vert {
+          flex-wrap: nowrap; } }
   .sec--showcase.animations .content img {
     width: 598px;
     border-radius: 12px; }
