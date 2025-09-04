@@ -329,8 +329,12 @@ footer .content {
       color: #FFB236; }
   .page-pogs .page-content {
     gap: 20px; }
+  .page-pogs .page-title {
+    color: #FFB236; }
   .page-pogs .page-description {
     max-width: 974px; }
+    .page-pogs .page-description b {
+      color: #FFB236; }
 
 .pogs-content {
   margin: 40px 0; }
