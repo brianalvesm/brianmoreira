@@ -332,12 +332,14 @@ footer .content {
   .page-pogs .page-description {
     max-width: 974px; }
 
+.pogs-content {
+  margin: 40px 0; }
+
 .pog-wrap {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  align-items: center;
-  margin-top: 40px; }
+  align-items: center; }
 
 .pog-title {
   color: #FFB236; }
