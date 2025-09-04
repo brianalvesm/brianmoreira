@@ -371,12 +371,33 @@ footer .content
 			*
 				text-align: center
 
+$pog-text-color: #FFB236
+
 // POGS
+.page-pogs
+	background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.4)), url('../images/bg-pogs.jpg')
+	background-repeat: repeat
+	color: white
+	height: auto
+	header .nav
+		border-bottom: 1px solid $pog-text-color
+		border-top: 1px solid $pog-text-color
+		.active
+			color: $pog-text-color
+	.page-content
+		gap: 20px
+	.page-description
+		max-width: 974px
+
 .pog-wrap
 	display: flex
 	flex-direction: column
 	gap: 30px
 	align-items: center
+	margin-top: 40px
+
+.pog-title
+	color: $pog-text-color
 
 %transition
 	-webkit-transition: 0.4s
