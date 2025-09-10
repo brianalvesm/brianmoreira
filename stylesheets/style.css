@@ -396,3 +396,10 @@ footer .content {
       visibility: visible; }
       .pog.flip .back:hover {
         cursor: pointer; }
+
+.banner {
+  display: block;
+  margin-top: 50px; }
+  @media only screen and (max-width: 40rem) {
+    .banner {
+      margin-top: 20px; } }
