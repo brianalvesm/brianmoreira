@@ -301,10 +301,25 @@ header
 	color: gray
 	text-align: left
 
-.contact-wrap
+.page-contact .page-content
 	display: flex
 	flex-direction: column
-	gap: 10px
+
+.contact-wrap
+	overflow: unset
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+	gap: 20px
+	width: 1080px
+	align-items: center
+	justify-content: center
+	@media only screen and (max-width: 1080px)
+		width: 100%
+	@media only screen and (max-width: 686px)
+		flex-wrap: nowrap
+		overflow: auto
+		justify-content: unset
 
 .social
 	gap: 5px
