@@ -252,8 +252,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 20px;
-  width: 1080px;
+  gap: 15px;
+  width: 1060px;
   align-items: center;
   justify-content: center; }
   @media only screen and (max-width: 1080px) {
