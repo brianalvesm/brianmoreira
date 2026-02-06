@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap')
 
-$primary-color: #FF778F
+$primary-color: #FFB236
 
 // MIXINS
 @mixin transition($time)
@@ -160,17 +160,20 @@ header
 .page-illustration
 	.nav a:nth-child(1)
 		@extend .active
-.page-pogs
+.page-fanarts
 	.nav a:nth-child(2)
 		@extend .active
-.page-animation
+.page-pogs
 	.nav a:nth-child(3)
 		@extend .active
-.page-about
+.page-animation
 	.nav a:nth-child(4)
 		@extend .active
-.page-contact
+.page-about
 	.nav a:nth-child(5)
+		@extend .active
+.page-contact
+	.nav a:nth-child(6)
 		@extend .active
 
 .kofi
@@ -377,8 +380,6 @@ footer .content
 			*
 				text-align: center
 
-$pog-text-color: #FFB236
-
 // POGS
 .page-pogs
 	background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.4)), url('../images/bg-pogs.jpg')
@@ -387,19 +388,14 @@ $pog-text-color: #FFB236
 	color: white
 	height: auto
 	min-height: 100%
-	header .nav
-		border-bottom: 1px solid $pog-text-color
-		border-top: 1px solid $pog-text-color
-		.active
-			color: $pog-text-color
 	.page-content
 		gap: 20px
 	.page-title
-		color: $pog-text-color
+		color: $primary-color
 	.page-description
 		max-width: 974px
 		b
-			color: $pog-text-color
+			color: $primary-color
 
 .pogs-content
 	margin: 40px 0
@@ -416,7 +412,7 @@ $pog-text-color: #FFB236
 	align-items: center
 
 .pog-title
-	color: $pog-text-color
+	color: $primary-color
 
 %transition
 	-webkit-transition: 0.4s

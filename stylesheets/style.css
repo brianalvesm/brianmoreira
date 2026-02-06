@@ -71,7 +71,7 @@ a.link {
   font-size: inherit; }
 
 a.cta {
-  color: #FF778F;
+  color: #FFB236;
   text-decoration: none;
   font-size: 20px; }
 
@@ -89,11 +89,11 @@ header {
     justify-content: center;
     gap: 30px;
     font-size: 22px;
-    border-bottom: 1px solid #FF778F;
-    border-top: 1px solid #FF778F;
+    border-bottom: 1px solid #FFB236;
+    border-top: 1px solid #FFB236;
     padding: 10px; }
-    header .nav .active, header .page-illustration .nav a:nth-child(1), .page-illustration header .nav a:nth-child(1), header .page-pogs .nav a:nth-child(2), .page-pogs header .nav a:nth-child(2), header .page-animation .nav a:nth-child(3), .page-animation header .nav a:nth-child(3), header .page-about .nav a:nth-child(4), .page-about header .nav a:nth-child(4), header .page-contact .nav a:nth-child(5), .page-contact header .nav a:nth-child(5) {
-      color: #FF778F; }
+    header .nav .active, header .page-illustration .nav a:nth-child(1), .page-illustration header .nav a:nth-child(1), header .page-fanarts .nav a:nth-child(2), .page-fanarts header .nav a:nth-child(2), header .page-pogs .nav a:nth-child(3), .page-pogs header .nav a:nth-child(3), header .page-animation .nav a:nth-child(4), .page-animation header .nav a:nth-child(4), header .page-about .nav a:nth-child(5), .page-about header .nav a:nth-child(5), header .page-contact .nav a:nth-child(6), .page-contact header .nav a:nth-child(6) {
+      color: #FFB236; }
   header .content {
     gap: 20px; }
   @media only screen and (max-width: 40rem) {
@@ -327,11 +327,6 @@ footer .content {
   color: white;
   height: auto;
   min-height: 100%; }
-  .page-pogs header .nav {
-    border-bottom: 1px solid #FFB236;
-    border-top: 1px solid #FFB236; }
-    .page-pogs header .nav .active, .page-pogs header .page-illustration .nav a:nth-child(1), .page-illustration .page-pogs header .nav a:nth-child(1), .page-pogs header .nav a:nth-child(2), .page-pogs header .page-animation .nav a:nth-child(3), .page-animation .page-pogs header .nav a:nth-child(3), .page-pogs header .page-about .nav a:nth-child(4), .page-about .page-pogs header .nav a:nth-child(4), .page-pogs header .page-contact .nav a:nth-child(5), .page-contact .page-pogs header .nav a:nth-child(5) {
-      color: #FFB236; }
   .page-pogs .page-content {
     gap: 20px; }
   .page-pogs .page-title {
