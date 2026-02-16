@@ -266,6 +266,7 @@ header {
       justify-content: unset; } }
 
 .social {
+  margin-top: 10px;
   gap: 5px; }
   .social a, .social img {
     max-width: 36px;
