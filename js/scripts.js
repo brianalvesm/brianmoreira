@@ -16,10 +16,16 @@ $(document).ready(function(){
       $(this).toggleClass('flip');
     });
 
+    $(function () {
+      var images = ['pirate-ship-1.png', 'tower-dragon-1.png', 'bears-bakery-1.png', 'fantasy-autumn-1.png', 'future-me-3.png', 'pogs-2.png', 'future-me-1.png', 'pirate-ship-3.png', 'bears-bakery-2.png', 'pogs-3.png', 'oddi.png', 'fantasy-autumn-2.png', 'pogs-1.png', 'future-me-2.png', 'snowman.png'];
+      $('.contact-profiles').css({
+        'background-image': 'url(../images/profiles/' + images[Math.floor(Math.random() * images.length)] + ')'
+      });
+    });
+
     $(document).ready(function(){
       $(".owl-carousel").owlCarousel();
     });
-
 
     $('.owl-carousel').owlCarousel({
       items:1,

@@ -247,23 +247,10 @@ header {
   display: flex;
   flex-direction: column; }
 
-.contact-wrap {
-  overflow: unset;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 15px;
-  width: 1060px;
-  align-items: center;
-  justify-content: center; }
-  @media only screen and (max-width: 1080px) {
-    .contact-wrap {
-      width: 100%; } }
-  @media only screen and (max-width: 686px) {
-    .contact-wrap {
-      flex-wrap: nowrap;
-      overflow: auto;
-      justify-content: unset; } }
+.contact-profiles {
+  width: 200px;
+  height: 200px;
+  background-size: cover; }
 
 .social {
   margin-top: 10px;
