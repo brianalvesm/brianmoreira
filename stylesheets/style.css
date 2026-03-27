@@ -93,7 +93,7 @@ header {
     border-bottom: 1px solid #FFB236;
     border-top: 1px solid #FFB236;
     padding: 10px; }
-    header .nav .active, header .page-illustration .nav a:nth-child(1), .page-illustration header .nav a:nth-child(1), header .page-fanarts .nav a:nth-child(2), .page-fanarts header .nav a:nth-child(2), header .page-pogs .nav a:nth-child(3), .page-pogs header .nav a:nth-child(3), header .page-animation .nav a:nth-child(4), .page-animation header .nav a:nth-child(4), header .page-about .nav a:nth-child(5), .page-about header .nav a:nth-child(5), header .page-contact .nav a:nth-child(6), .page-contact header .nav a:nth-child(6) {
+    header .nav .active, header .page-illustration .nav a:nth-child(1), .page-illustration header .nav a:nth-child(1), header .page-fanarts .nav a:nth-child(2), .page-fanarts header .nav a:nth-child(2), header .page-animation .nav a:nth-child(3), .page-animation header .nav a:nth-child(3), header .page-about .nav a:nth-child(4), .page-about header .nav a:nth-child(4), header .page-contact .nav a:nth-child(5), .page-contact header .nav a:nth-child(5) {
       color: #FFB236; }
   header .content {
     gap: 20px; }
