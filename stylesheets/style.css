@@ -127,12 +127,6 @@ header {
       header.christmas .nav:before, header.christmas .nav:after {
         content: none; } }
 
-@media only screen and (min-width: 40rem) {
-  .kofi {
-    position: absolute;
-    right: 40px;
-    top: 40px; } }
-
 .owl-carousel {
   max-width: 1204px;
   margin: 0 auto 40px; }
@@ -274,12 +268,19 @@ header {
   height: 200px;
   background-size: cover; }
 
+.social-wrap {
+  gap: 10px; }
+  @media only screen and (min-width: 50rem) {
+    .social-wrap {
+      position: absolute;
+      right: 40px;
+      top: 40px; } }
+
 .social {
-  margin-top: 10px;
   gap: 5px; }
   .social a, .social img {
-    max-width: 36px;
-    max-height: 36px; }
+    max-width: 34px;
+    max-height: 34px; }
 
 .news-headline {
   display: flex;
