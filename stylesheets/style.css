@@ -317,6 +317,8 @@ footer .content {
   gap: 20px; }
   footer .content img {
     width: 156px; }
+    footer .content img.noai-art {
+      width: initial; }
 
 .close-button {
   position: absolute;
