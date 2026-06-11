@@ -9,7 +9,7 @@
   .flex--v {
     flex-direction: column; }
 
-.chewy, h1, h2, h3, h4, h5, h6, a.cta, header .nav {
+.chewy, h1, h2, h3, h4, h5, h6, a.cta, header .nav, .fiverr .btn-fiverr {
   font-family: 'Chewy', 'Poppins', sans-serif; }
 
 .poppins {
@@ -308,6 +308,44 @@ header {
       align-items: center; }
     .news-headline p {
       text-align: center; } }
+
+.quote {
+  font-size: 16px; }
+
+.ratings {
+  display: flex;
+  gap: 4px; }
+
+.fiverr {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center; }
+  .fiverr .quote {
+    font-size: 16px;
+    color: #051A2E; }
+  .fiverr .btn-fiverr {
+    padding: 5px 0;
+    display: flex;
+    gap: 8px;
+    font-size: 27px;
+    color: #404145;
+    overflow: visible;
+    position: relative;
+    z-index: 1; }
+    .fiverr .btn-fiverr:before {
+      content: "";
+      background-image: url("../images/icons/fiverr-underline.svg");
+      display: block;
+      width: 112px;
+      height: 17px;
+      position: absolute;
+      bottom: -8px;
+      left: calc(50% - 56px);
+      z-index: -1; }
+
+hr {
+  width: 450px; }
 
 footer .content {
   gap: 10px;
