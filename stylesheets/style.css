@@ -329,7 +329,6 @@ header {
     display: flex;
     gap: 8px;
     font-size: 27px;
-    color: #404145;
     overflow: visible;
     position: relative;
     z-index: 1; }
